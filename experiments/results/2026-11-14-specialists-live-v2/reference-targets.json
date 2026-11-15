@@ -1,0 +1,98 @@
+{
+  "case_01": {
+    "recommendation": {
+      "card_id": "case_01",
+      "arm": "scorecard",
+      "action_or_abstain": "hedge_25",
+      "reason": "feasible",
+      "procedural": "The action is inside the mandate and leaves both limits.",
+      "economic": "Declared utility -4672.02 EUR is the best feasible value.",
+      "evidential": "Figures come from the empirical P&L panel and the named stress shock.",
+      "evidence_ids": [
+        "case_01:var_95",
+        "case_01:cvar_95",
+        "case_01:stress_loss",
+        "case_01:liquidity_cost",
+        "case_01:governance_penalty",
+        "case_01:tenor_penalty",
+        "case_01:net_delta",
+        "case_01:breach",
+        "case_01:utility"
+      ],
+      "escalation_pending": false
+    },
+    "decision_basis": "highest_utility"
+  },
+  "case_02": {
+    "recommendation": {
+      "card_id": "case_02",
+      "arm": "scorecard",
+      "action_or_abstain": "abstain",
+      "reason": "missing_credit",
+      "procedural": "Credit on a position the action would resize is missing, so exposure-changing actions are not scored.",
+      "economic": "No economic ranking. Missing credit is unknown, not safe.",
+      "evidential": "The credit evidence row records status missing.",
+      "evidence_ids": [
+        "case_02:var_95",
+        "case_02:cvar_95",
+        "case_02:stress_loss",
+        "case_02:liquidity_cost",
+        "case_02:governance_penalty",
+        "case_02:tenor_penalty",
+        "case_02:net_delta",
+        "case_02:breach",
+        "case_02:utility"
+      ],
+      "escalation_pending": false
+    },
+    "decision_basis": "missing_credit"
+  },
+  "case_03": {
+    "recommendation": {
+      "card_id": "case_03",
+      "arm": "scorecard",
+      "action_or_abstain": "abstain",
+      "reason": "near_tie",
+      "procedural": "The best and second distinct feasible utilities are inside the declared near-tie band.",
+      "economic": "Top actions hedge_25 and hedge_50 are not separated.",
+      "evidential": "Utilities use the declared formula and the visible evidence only.",
+      "evidence_ids": [
+        "case_03:var_95",
+        "case_03:cvar_95",
+        "case_03:stress_loss",
+        "case_03:liquidity_cost",
+        "case_03:governance_penalty",
+        "case_03:tenor_penalty",
+        "case_03:net_delta",
+        "case_03:breach",
+        "case_03:utility"
+      ],
+      "escalation_pending": false
+    },
+    "decision_basis": "near_tie"
+  },
+  "case_04": {
+    "recommendation": {
+      "card_id": "case_04",
+      "arm": "scorecard",
+      "action_or_abstain": "hedge_25",
+      "reason": "feasible",
+      "procedural": "The action is inside the mandate and leaves both limits.",
+      "economic": "Declared utility -4999.06 EUR is the best feasible value.",
+      "evidential": "Figures come from the empirical P&L panel and the named stress shock.",
+      "evidence_ids": [
+        "case_04:var_95",
+        "case_04:cvar_95",
+        "case_04:stress_loss",
+        "case_04:liquidity_cost",
+        "case_04:governance_penalty",
+        "case_04:tenor_penalty",
+        "case_04:net_delta",
+        "case_04:breach",
+        "case_04:utility"
+      ],
+      "escalation_pending": false
+    },
+    "decision_basis": "highest_utility"
+  }
+}

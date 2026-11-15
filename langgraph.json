@@ -1,0 +1,9 @@
+{
+  "dependencies": [
+    "."
+  ],
+  "graphs": {
+    "review": "./src/risk_desk/graphs/studio.py:graph"
+  },
+  "env": ".env"
+}

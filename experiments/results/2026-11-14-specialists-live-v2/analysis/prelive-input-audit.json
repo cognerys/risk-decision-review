@@ -1,0 +1,41 @@
+{
+  "scope": "Offline input/formula/protocol audit only; no model calls",
+  "cases": [
+    {
+      "case_id": "case_01",
+      "reference_action": "hedge_25",
+      "reference_basis": "highest_utility",
+      "feasible_formula_checks": 9,
+      "max_rounding_difference": 4.500034265220165e-07,
+      "utility_value_leaks": [],
+      "visible_bundle_sha256": "302f2a98bb6b8735486b5e5cf42bdc5f8fabd8144653993d61a7f2faed70f9be"
+    },
+    {
+      "case_id": "case_02",
+      "reference_action": "abstain",
+      "reference_basis": "missing_credit",
+      "feasible_formula_checks": 3,
+      "max_rounding_difference": 1.0000007932831068e-07,
+      "utility_value_leaks": [],
+      "visible_bundle_sha256": "d3fe95dcce6e32a68f5ab33e57ea928932e20ea1dbd2f4ab819560ba97d8c8b9"
+    },
+    {
+      "case_id": "case_03",
+      "reference_action": "abstain",
+      "reference_basis": "near_tie",
+      "feasible_formula_checks": 7,
+      "max_rounding_difference": 4.50001607532613e-07,
+      "utility_value_leaks": [],
+      "visible_bundle_sha256": "d7319460388a5b6fa05964ff7e83ca7a596a0e2232f83a159a7d142108052958"
+    },
+    {
+      "case_id": "case_04",
+      "reference_action": "hedge_25",
+      "reference_basis": "highest_utility",
+      "feasible_formula_checks": 7,
+      "max_rounding_difference": 5.999991117278114e-07,
+      "utility_value_leaks": [],
+      "visible_bundle_sha256": "69b3350667d596ed432b7927e07a44ea57cb08d6418dc264fe1509848ed5ecf8"
+    }
+  ]
+}

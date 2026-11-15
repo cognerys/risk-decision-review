@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "risk-desk"
+version = "0.1.0"
+description = "Synthetic research software for reviewing post-trade energy-risk decisions."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "langgraph",
+  "langchain>=1",
+  "langchain-core",
+  "langchain-openai",
+  "pydantic>=2",
+  "numpy>=1.26",
+  "langgraph-checkpoint-sqlite",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+studio = ["langgraph-cli[inmem]"]
+
+[project.scripts]
+risk-desk = "risk_desk.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

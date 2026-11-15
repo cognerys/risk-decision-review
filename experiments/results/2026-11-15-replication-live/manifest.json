@@ -1,0 +1,139 @@
+{
+  "run_id": "20261115T125106Z-20ababf4",
+  "mode": "live",
+  "experiment": "EXP-008-R1",
+  "prompt_version": "specialist-study-v2",
+  "settings": {
+    "model": "gpt-6-luna",
+    "live": true,
+    "reasoning_effort": "low",
+    "langsmith_project": "ri[redacted]"
+  },
+  "jobs": [
+    {
+      "card_id": "case_01",
+      "arm": "single",
+      "job_id": "case_01--single"
+    },
+    {
+      "card_id": "case_01",
+      "arm": "specialists",
+      "job_id": "case_01--specialists"
+    },
+    {
+      "card_id": "case_01",
+      "arm": "challenged",
+      "job_id": "case_01--challenged"
+    },
+    {
+      "card_id": "case_01",
+      "arm": "self_review",
+      "job_id": "case_01--self_review"
+    },
+    {
+      "card_id": "case_02",
+      "arm": "specialists",
+      "job_id": "case_02--specialists"
+    },
+    {
+      "card_id": "case_02",
+      "arm": "challenged",
+      "job_id": "case_02--challenged"
+    },
+    {
+      "card_id": "case_02",
+      "arm": "self_review",
+      "job_id": "case_02--self_review"
+    },
+    {
+      "card_id": "case_02",
+      "arm": "single",
+      "job_id": "case_02--single"
+    },
+    {
+      "card_id": "case_03",
+      "arm": "challenged",
+      "job_id": "case_03--challenged"
+    },
+    {
+      "card_id": "case_03",
+      "arm": "self_review",
+      "job_id": "case_03--self_review"
+    },
+    {
+      "card_id": "case_03",
+      "arm": "single",
+      "job_id": "case_03--single"
+    },
+    {
+      "card_id": "case_03",
+      "arm": "specialists",
+      "job_id": "case_03--specialists"
+    },
+    {
+      "card_id": "case_04",
+      "arm": "self_review",
+      "job_id": "case_04--self_review"
+    },
+    {
+      "card_id": "case_04",
+      "arm": "single",
+      "job_id": "case_04--single"
+    },
+    {
+      "card_id": "case_04",
+      "arm": "specialists",
+      "job_id": "case_04--specialists"
+    },
+    {
+      "card_id": "case_04",
+      "arm": "challenged",
+      "job_id": "case_04--challenged"
+    }
+  ],
+  "call_cap": 60,
+  "max_generated_units": 1800,
+  "generated_unit": "tokens",
+  "timeout_seconds": 60,
+  "sdk_retries": 0,
+  "source": {
+    "python": "3.11.15 (main, May 10 2026, 19:23:07) [Clang 22.1.3 ]",
+    "platform": "darwin",
+    "source_sha256": {
+      "experiments/protocol.md": "2ec0e3d7f06600579b4476217bd72f73d26d6c5d318d456abc726ecee11817b1",
+      "experiments/run_study.py": "631fc7feb4ba4765dde757ac8fa656020f9d80e1da1d952ae463d8f4724812a2",
+      "pyproject.toml": "c4174a325cdd5e8037a6af06df36be7719b152bcb7ca38d263435d11da5db866",
+      "src/risk_desk/__init__.py": "85e3952302e3b8745ebdbc52b810680ef9ef9a17b41933b612674552c271d40e",
+      "src/risk_desk/cli.py": "4585772fda9c9491ec3073352e42922a9c04b221722532f9a82fb22ab93d5c26",
+      "src/risk_desk/config.py": "7851b603f0fd87ce25068bde1ad4469ba014b618c2efea3d5a3b45da809c44ef",
+      "src/risk_desk/data/__init__.py": "5c2ced5022c731e50a07d9bbcd8c79016d8a5226839f8c5c264f72e4537b586b",
+      "src/risk_desk/data/cards.py": "9f1ac02fcf3c30263926c8e45c5eff0182fb8ff6852a7f0a58598dc1685f0fcf",
+      "src/risk_desk/data/fixtures/returns.json": "3c46a78e73ee6daafe9d0c033566018ed9fc1d9954b66e6997ff8df098fcc9f9",
+      "src/risk_desk/data/panel.py": "99c418660fb3ef342368c2b99158d78b4020fa18d82f7a7f1e0d52ed618de730",
+      "src/risk_desk/data/study_cases.py": "277b238828ce7a8f38a6a03195fa7a6a142f064c37c4f41f6753ca9293f77719",
+      "src/risk_desk/engine/__init__.py": "5c2ced5022c731e50a07d9bbcd8c79016d8a5226839f8c5c264f72e4537b586b",
+      "src/risk_desk/engine/score.py": "3d365758802d089297372893a9644ea573f4bffa68feb0da288e6de7aee45a1c",
+      "src/risk_desk/graphs/__init__.py": "689ab641725bc3671b097e073c075581bfb76100f9d24000d0eef70b84a64c1c",
+      "src/risk_desk/graphs/review.py": "803446022326accd81ebf0a6dc3a7d51970074075c723127f98836eba3cc3a29",
+      "src/risk_desk/graphs/studio.py": "99af5905d600d7290e2fca70c2d0122f4cbfa18fd3726dd7916e5c1edfc9260e",
+      "src/risk_desk/llm.py": "84c41def770b9d989e7e847d830f6aa9cc8e62870204903b0368da3332ff3f62",
+      "src/risk_desk/policy.py": "894d0cfd77d8d19f36a6436294bd78c1266f90e67c1312b19edc852b027d03b1",
+      "src/risk_desk/responses.py": "e55778f97b13b774b56156d5f39d0a1bc456d95c3a97fadbe7d95dd862eb4902",
+      "src/risk_desk/schemas.py": "a34fc8f9f811ffe6255ddbd0c9690b6df96fe96bbdebf6e533431b1fbe21cce0",
+      "src/risk_desk/tracing.py": "e1221f81eaeb51809cdadb1d07eaf50e5f089784a053f3446d59b5aea216b5d5",
+      "src/risk_desk/viewer/__init__.py": "5accb13bd69a74c1fc4abb2d7e6975e44bd509734218f4ac3574b59fb311c3b7",
+      "src/risk_desk/viewer/graph_view.py": "e7bfc9d9bca36520e0ca1edc5fc1f88b94c8f303caca824f2a79ac3de4a35c03",
+      "src/risk_desk/viewer/server.py": "6245b42440b84dd4670bbd5fbd7ce420b20606cbf7446b8c4e688c763ba13373",
+      "tests/test_engine.py": "90e0230b6b5d5d52a3bf9c6848bd82516dccf30e3ecabc09374815c2aa9650fc",
+      "tests/test_entrypoints.py": "5fdd6d8faa8cb02e7be8cea6f55ed142f9722dbae2690d65d4e387ea1aca526f",
+      "tests/test_foundation.py": "b6be53b5e3ca68554d68389b29b7f2e945453dc7466c77d00ea866bfe952719f",
+      "tests/test_review_graph.py": "07a685342acea6ad33d9b3a190c36ecf399697d49bca306f19b7968be6e7bf27",
+      "tests/test_study.py": "164e09b2d894607ef719263d2c2a58e1f3e78a865f0dab3398c2e42d74ce740e",
+      "tests/test_viewer.py": "8f69177771ce032d18af5a2827508db7c51458dd42d48a62c11cfe9e4159ff16"
+    },
+    "head": "9100f43879ecaa63434902390ce891b60b8f674d",
+    "worktree_status": [
+      "?? experiments/results/2026-11-15-replication-live/"
+    ]
+  }
+}

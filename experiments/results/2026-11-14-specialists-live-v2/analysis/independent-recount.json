@@ -1,0 +1,2352 @@
+{
+  "run_id": "20261114T104952Z-50766afe",
+  "method": "Independent JSON/schema/arithmetic recount; no study evaluator imported.",
+  "planned_jobs": 16,
+  "completed_jobs": 16,
+  "calls": 56,
+  "metric_mismatches": [],
+  "source_hash_mismatches": [],
+  "request_bundle_or_private_value_errors": [],
+  "arms": {
+    "single": {
+      "planned": 4,
+      "completed": 4,
+      "contract": 3,
+      "grounded_policy_match": 3,
+      "action_match": 4,
+      "basis_match": 4,
+      "numeric_correct": 4,
+      "components_complete": 4,
+      "fallback": 1,
+      "unnecessary_abstention": 0,
+      "calls": 4,
+      "usage": {
+        "input_units": 39757,
+        "output_units": 3177,
+        "total_units": 42934
+      },
+      "usage_missing": 0
+    },
+    "specialists": {
+      "planned": 4,
+      "completed": 4,
+      "contract": 4,
+      "grounded_policy_match": 4,
+      "action_match": 4,
+      "basis_match": 4,
+      "numeric_correct": 4,
+      "components_complete": 4,
+      "fallback": 0,
+      "unnecessary_abstention": 0,
+      "calls": 12,
+      "usage": {
+        "input_units": 125008,
+        "output_units": 10121,
+        "total_units": 135129
+      },
+      "usage_missing": 0
+    },
+    "challenged": {
+      "planned": 4,
+      "completed": 4,
+      "contract": 4,
+      "grounded_policy_match": 4,
+      "action_match": 4,
+      "basis_match": 4,
+      "numeric_correct": 4,
+      "components_complete": 4,
+      "fallback": 0,
+      "unnecessary_abstention": 0,
+      "calls": 20,
+      "usage": {
+        "input_units": 217535,
+        "output_units": 15511,
+        "total_units": 233046
+      },
+      "usage_missing": 0
+    },
+    "self_review": {
+      "planned": 4,
+      "completed": 4,
+      "contract": 4,
+      "grounded_policy_match": 4,
+      "action_match": 4,
+      "basis_match": 4,
+      "numeric_correct": 4,
+      "components_complete": 4,
+      "fallback": 0,
+      "unnecessary_abstention": 0,
+      "calls": 20,
+      "usage": {
+        "input_units": 208472,
+        "output_units": 17297,
+        "total_units": 225769
+      },
+      "usage_missing": 0
+    }
+  },
+  "pairs": [
+    {
+      "comparison": "specialists minus single",
+      "cases": [
+        {
+          "case": "case_01",
+          "complete": true,
+          "contract_delta": 0,
+          "policy_delta": 0
+        },
+        {
+          "case": "case_02",
+          "complete": true,
+          "contract_delta": 0,
+          "policy_delta": 0
+        },
+        {
+          "case": "case_03",
+          "complete": true,
+          "contract_delta": 0,
+          "policy_delta": 0
+        },
+        {
+          "case": "case_04",
+          "complete": true,
+          "contract_delta": 1,
+          "policy_delta": 1
+        }
+      ],
+      "policy_counts": {
+        "-1": 0,
+        "0": 3,
+        "1": 1,
+        "None": 0
+      }
+    },
+    {
+      "comparison": "challenged minus specialists",
+      "cases": [
+        {
+          "case": "case_01",
+          "complete": true,
+          "contract_delta": 0,
+          "policy_delta": 0
+        },
+        {
+          "case": "case_02",
+          "complete": true,
+          "contract_delta": 0,
+          "policy_delta": 0
+        },
+        {
+          "case": "case_03",
+          "complete": true,
+          "contract_delta": 0,
+          "policy_delta": 0
+        },
+        {
+          "case": "case_04",
+          "complete": true,
+          "contract_delta": 0,
+          "policy_delta": 0
+        }
+      ],
+      "policy_counts": {
+        "-1": 0,
+        "0": 4,
+        "1": 0,
+        "None": 0
+      }
+    },
+    {
+      "comparison": "challenged minus self_review",
+      "cases": [
+        {
+          "case": "case_01",
+          "complete": true,
+          "contract_delta": 0,
+          "policy_delta": 0
+        },
+        {
+          "case": "case_02",
+          "complete": true,
+          "contract_delta": 0,
+          "policy_delta": 0
+        },
+        {
+          "case": "case_03",
+          "complete": true,
+          "contract_delta": 0,
+          "policy_delta": 0
+        },
+        {
+          "case": "case_04",
+          "complete": true,
+          "contract_delta": 0,
+          "policy_delta": 0
+        }
+      ],
+      "policy_counts": {
+        "-1": 0,
+        "0": 4,
+        "1": 0,
+        "None": 0
+      }
+    }
+  ],
+  "cases": [
+    {
+      "job": "case_01--single",
+      "arm": "single",
+      "case": "case_01",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "hedge_25",
+      "basis": "highest_utility",
+      "reference": "hedge_25",
+      "reference_basis": "highest_utility",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": 0.0,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_01--specialists",
+      "arm": "specialists",
+      "case": "case_01",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "hedge_25",
+      "basis": "highest_utility",
+      "reference": "hedge_25",
+      "reference_basis": "highest_utility",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": 0.0,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_01--challenged",
+      "arm": "challenged",
+      "case": "case_01",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "hedge_25",
+      "basis": "highest_utility",
+      "reference": "hedge_25",
+      "reference_basis": "highest_utility",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": 0.0,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_01--self_review",
+      "arm": "self_review",
+      "case": "case_01",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "hedge_25",
+      "basis": "highest_utility",
+      "reference": "hedge_25",
+      "reference_basis": "highest_utility",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": 0.0,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_02--specialists",
+      "arm": "specialists",
+      "case": "case_02",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "abstain",
+      "basis": "missing_credit",
+      "reference": "abstain",
+      "reference_basis": "missing_credit",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": null,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_02--challenged",
+      "arm": "challenged",
+      "case": "case_02",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "abstain",
+      "basis": "missing_credit",
+      "reference": "abstain",
+      "reference_basis": "missing_credit",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": null,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_02--self_review",
+      "arm": "self_review",
+      "case": "case_02",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "abstain",
+      "basis": "missing_credit",
+      "reference": "abstain",
+      "reference_basis": "missing_credit",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": null,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_02--single",
+      "arm": "single",
+      "case": "case_02",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "abstain",
+      "basis": "missing_credit",
+      "reference": "abstain",
+      "reference_basis": "missing_credit",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": null,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_03--challenged",
+      "arm": "challenged",
+      "case": "case_03",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "abstain",
+      "basis": "near_tie",
+      "reference": "abstain",
+      "reference_basis": "near_tie",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": null,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_03--self_review",
+      "arm": "self_review",
+      "case": "case_03",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "abstain",
+      "basis": "near_tie",
+      "reference": "abstain",
+      "reference_basis": "near_tie",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": null,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_03--single",
+      "arm": "single",
+      "case": "case_03",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "abstain",
+      "basis": "near_tie",
+      "reference": "abstain",
+      "reference_basis": "near_tie",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": null,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_03--specialists",
+      "arm": "specialists",
+      "case": "case_03",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "abstain",
+      "basis": "near_tie",
+      "reference": "abstain",
+      "reference_basis": "near_tie",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": null,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_04--self_review",
+      "arm": "self_review",
+      "case": "case_04",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "hedge_25",
+      "basis": "highest_utility",
+      "reference": "hedge_25",
+      "reference_basis": "highest_utility",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": 0.0,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_04--single",
+      "arm": "single",
+      "case": "case_04",
+      "status": "complete",
+      "contract": false,
+      "shape": true,
+      "legal": true,
+      "citations": false,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "hedge_25",
+      "basis": "highest_utility",
+      "reference": "hedge_25",
+      "reference_basis": "highest_utility",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": false,
+      "regret": 0.0,
+      "unnecessary_abstention": false,
+      "fallback": true
+    },
+    {
+      "job": "case_04--specialists",
+      "arm": "specialists",
+      "case": "case_04",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "hedge_25",
+      "basis": "highest_utility",
+      "reference": "hedge_25",
+      "reference_basis": "highest_utility",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": 0.0,
+      "unnecessary_abstention": false,
+      "fallback": false
+    },
+    {
+      "job": "case_04--challenged",
+      "arm": "challenged",
+      "case": "case_04",
+      "status": "complete",
+      "contract": true,
+      "shape": true,
+      "legal": true,
+      "citations": true,
+      "numeric_correct": true,
+      "required_claims": true,
+      "components_complete": true,
+      "component_errors": [],
+      "action": "hedge_25",
+      "basis": "highest_utility",
+      "reference": "hedge_25",
+      "reference_basis": "highest_utility",
+      "action_match": true,
+      "basis_match": true,
+      "grounded_policy_match": true,
+      "regret": 0.0,
+      "unnecessary_abstention": false,
+      "fallback": false
+    }
+  ],
+  "handoff_summary": {
+    "planned_reports": 16,
+    "observed_reports": 16,
+    "usable": 16,
+    "fully_valid": 16,
+    "findings_accepted": 60,
+    "findings_rejected": 0,
+    "report_finding_count_unknown": 0
+  },
+  "handoffs": [
+    {
+      "job": "case_01--specialists",
+      "arm": "specialists",
+      "case": "case_01",
+      "role": "market_physical",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 4,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_01--specialists",
+      "arm": "specialists",
+      "case": "case_01",
+      "role": "credit_governance",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 4,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_01--challenged",
+      "arm": "challenged",
+      "case": "case_01",
+      "role": "market_physical",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 3,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_01--challenged",
+      "arm": "challenged",
+      "case": "case_01",
+      "role": "credit_governance",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 4,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_02--specialists",
+      "arm": "specialists",
+      "case": "case_02",
+      "role": "market_physical",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 3,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_02--specialists",
+      "arm": "specialists",
+      "case": "case_02",
+      "role": "credit_governance",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 4,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_02--challenged",
+      "arm": "challenged",
+      "case": "case_02",
+      "role": "market_physical",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 4,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_02--challenged",
+      "arm": "challenged",
+      "case": "case_02",
+      "role": "credit_governance",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 3,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_03--challenged",
+      "arm": "challenged",
+      "case": "case_03",
+      "role": "market_physical",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 3,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_03--challenged",
+      "arm": "challenged",
+      "case": "case_03",
+      "role": "credit_governance",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 4,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_03--specialists",
+      "arm": "specialists",
+      "case": "case_03",
+      "role": "market_physical",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 4,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_03--specialists",
+      "arm": "specialists",
+      "case": "case_03",
+      "role": "credit_governance",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 4,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_04--specialists",
+      "arm": "specialists",
+      "case": "case_04",
+      "role": "market_physical",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 4,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_04--specialists",
+      "arm": "specialists",
+      "case": "case_04",
+      "role": "credit_governance",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 4,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_04--challenged",
+      "arm": "challenged",
+      "case": "case_04",
+      "role": "market_physical",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 4,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rejected_indices": []
+    },
+    {
+      "job": "case_04--challenged",
+      "arm": "challenged",
+      "case": "case_04",
+      "role": "credit_governance",
+      "usable": true,
+      "fully_valid": true,
+      "findings_count_known": true,
+      "accepted": 4,
+      "rejected": 0,
+      "accepted_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rejected_indices": []
+    }
+  ],
+  "changes": [
+    {
+      "job": "case_01--challenged",
+      "trajectory": [
+        {
+          "role": "proposer",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "revision",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        }
+      ],
+      "challenge": {
+        "report": {
+          "requires_revision": false,
+          "assessment": "The proposed hedge_25 is supported by the declared rules and evidence. Its calculated utility is -4672.01869225; the next distinct feasible utility is hedge_50/reduce_50 at -6852.67912805, a gap of 2180.6604358, exceeding both near-tie thresholds. The cited credit, mandate, feasibility, breach, and risk evidence is consistent with the stated rationale.",
+          "issues": []
+        },
+        "usable": true,
+        "requires_revision": false,
+        "parse_status": "ok"
+      },
+      "initial_proposal": {
+        "action_or_abstain": "hedge_25",
+        "decision_basis": "highest_utility",
+        "reason": "Among feasible actions, hedge_25 has the highest utility under the declared formula. Missing CP-RETAIL credit is on B3 positions, outside A-POWER\u2019s B13 authority, so it does not trigger the stated missing-credit abstention rule.",
+        "procedural": "A-POWER is authorised to trade B13. Hedge_25 is feasible and requires no pending escalation or exception approval.",
+        "economic": "Hold breaches the stress limit; hedge_25 reduces stress below the limit. Its utility exceeds the next distinct feasible alternative by more than both near-tie thresholds. Higher hedge sizes further reduce risk but their increased liquidity costs lower utility.",
+        "evidential": "The B13 counterparty CP-POWER has known credit. CP-RETAIL credit is missing for B3 positions, which are outside this mandate. Escalation and an exception request leave exposure unchanged; feasible market actions reduce hold risk, so the unreducible-breach condition does not apply.",
+        "evidence_ids": [
+          "case_01:action:hold:stress_loss",
+          "case_01:action:hedge_25:stress_loss",
+          "case_01:action:hedge_25:cvar_95",
+          "case_01:action:hedge_25:liquidity_cost",
+          "case_01:action:hedge_25:governance_penalty",
+          "case_01:action:hedge_25:tenor_penalty",
+          "case_01:action:hedge_25:utility",
+          "case_01:action:hedge_50:stress_loss",
+          "case_01:action:hedge_50:cvar_95",
+          "case_01:action:hedge_50:liquidity_cost",
+          "case_01:action:hedge_50:governance_penalty",
+          "case_01:action:hedge_50:tenor_penalty",
+          "case_01:action:hedge_25:feasible",
+          "case_01:action:hold:breach",
+          "case_01:action:hedge_25:breach",
+          "case_01:action:hedge_25:utility",
+          "case_01:credit",
+          "case_01:position:B13-near",
+          "case_01:position:B13-far",
+          "case_01:position:B3-phys",
+          "case_01:position:B3-fin",
+          "case_01:position:B3-fin-near",
+          "case_01:mandate",
+          "case_01:decision_rules"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_01:action:hold:stress_loss",
+            "value": 2492.0
+          },
+          {
+            "evidence_id": "case_01:action:hedge_25:utility",
+            "value": -4672.01869225
+          }
+        ]
+      },
+      "final_proposal": {
+        "action_or_abstain": "hedge_25",
+        "decision_basis": "highest_utility",
+        "reason": "Hedge_25 has the highest utility among feasible actions under the declared formula. Missing CP-RETAIL credit applies to B3 positions, not a position in A-POWER\u2019s authorised B13 book, so it does not trigger the stated missing-credit abstention rule.",
+        "procedural": "A-POWER is authorised to trade B13, and hedge_25 is feasible without pending escalation or exception approval. The alternative of abstaining for missing credit is not required by the rule for the out-of-scope B3 positions.",
+        "economic": "Hold breaches the stress limit; hedge_25 reduces stress below it. Greater hedge sizes reduce risk further but incur higher liquidity costs and have lower utility. Escalation and an exception request leave exposure unchanged, so neither is the exposure-reducing alternative selected here.",
+        "evidential": "The challenge identifies no supported error in the proposal. The specialist report\u2019s suggestion of a binding missing-credit issue for the authorised book conflicts with the mandate and position evidence: CP-RETAIL positions are in B3, while A-POWER may trade only B13. CP-RETAIL credit remains unknown, not safe; it is simply not shown to concern an authorised-book position.",
+        "evidence_ids": [
+          "case_01:action:hold:stress_loss",
+          "case_01:action:hedge_25:utility",
+          "case_01:action:hedge_25:stress_loss",
+          "case_01:action:hedge_25:cvar_95",
+          "case_01:action:hedge_25:liquidity_cost",
+          "case_01:action:hedge_25:governance_penalty",
+          "case_01:action:hedge_25:tenor_penalty",
+          "case_01:action:hedge_25:feasible",
+          "case_01:action:hedge_25:breach",
+          "case_01:action:hold:breach",
+          "case_01:action:hedge_50:stress_loss",
+          "case_01:action:hedge_50:cvar_95",
+          "case_01:action:hedge_50:liquidity_cost",
+          "case_01:action:hedge_50:governance_penalty",
+          "case_01:action:hedge_50:tenor_penalty",
+          "case_01:credit",
+          "case_01:position:B3-phys",
+          "case_01:position:B3-fin",
+          "case_01:position:B3-fin-near",
+          "case_01:mandate",
+          "case_01:decision_rules",
+          "case_01:action:escalate:net_delta",
+          "case_01:action:request_limit_exception:net_delta"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_01:action:hold:stress_loss",
+            "value": 2492.0
+          },
+          {
+            "evidence_id": "case_01:action:hedge_25:utility",
+            "value": -4672.01869225
+          }
+        ]
+      }
+    },
+    {
+      "job": "case_01--self_review",
+      "trajectory": [
+        {
+          "role": "proposer",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        }
+      ],
+      "challenge": {},
+      "initial_proposal": {
+        "action_or_abstain": "hedge_25",
+        "decision_basis": "highest_utility",
+        "reason": "No declared abstention rule applies; hedge_25 has the highest utility among feasible actions.",
+        "procedural": "The mandate permits trading book B13, and hedge_25 is feasible. Credit is missing for CP-RETAIL, but its positions are in B3, not an authorised book, so the specified missing-credit rule does not require abstention. Escalation is not required because feasible market actions reduce hold risk.",
+        "economic": "Hold breaches the stress limit, while hedge_25 brings stress below it. The next distinct action, hedge_50, is more than EUR 2,000 below the best utility, so the near-tie rule does not require abstention. Reduce_25 has the same risk and cost components as hedge_25, and action order breaks their exact utility tie in favor of hedge_25.",
+        "evidential": "Utility is derived from the stated formula and cited components; it is not a supplied numeric utility. No forecast is visible, so this selection follows the declared synthetic policy rather than a market forecast.",
+        "evidence_ids": [
+          "case_01:decision_rules",
+          "case_01:mandate",
+          "case_01:credit",
+          "case_01:action:hold:breach",
+          "case_01:action:hold:stress_loss",
+          "case_01:limits",
+          "case_01:action:hedge_25:feasible",
+          "case_01:action:hedge_25:breach",
+          "case_01:action:hedge_25:stress_loss",
+          "case_01:action:hedge_25:cvar_95",
+          "case_01:action:hedge_25:liquidity_cost",
+          "case_01:action:hedge_25:governance_penalty",
+          "case_01:action:hedge_25:tenor_penalty",
+          "case_01:action:hedge_25:utility",
+          "case_01:action:hedge_50:utility",
+          "case_01:action:reduce_25:utility",
+          "case_01:market"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_01:action:hold:stress_loss",
+            "value": 2492.0
+          },
+          {
+            "evidence_id": "case_01:action:hedge_25:utility",
+            "value": -4672.01969225
+          }
+        ]
+      },
+      "final_proposal": {
+        "action_or_abstain": "hedge_25",
+        "decision_basis": "highest_utility",
+        "reason": "Hedge_25 has the highest utility among feasible actions. Reduce_25 has exactly the same utility, so action_order selects hedge_25. No declared abstention rule applies.",
+        "procedural": "The mandate authorises trading in B13, where the counterparty is CP-POWER with known credit. Missing CP-RETAIL credit is associated with B3, not a position in an authorised book. Hold breaches the stress limit, but feasible market actions reduce hold stress, so the unreducible-breach rule does not require escalation.",
+        "economic": "Hold stress loss is 2492 EUR, above the 2000 EUR limit. Hedge_25 reduces stress loss below the limit. Hedge_50 is the next distinct utility after the hedge_25/reduce_25 tie; its utility gap is greater than both near-tie thresholds.",
+        "evidential": "Utilities are calculated using the declared formula and cited component values. No forecast is visible; this decision follows the declared synthetic policy, not a market forecast.",
+        "evidence_ids": [
+          "case_01:decision_rules",
+          "case_01:mandate",
+          "case_01:credit",
+          "case_01:limits",
+          "case_01:market",
+          "case_01:action:hold:breach",
+          "case_01:action:hold:stress_loss",
+          "case_01:action:hedge_25:feasible",
+          "case_01:action:hedge_25:breach",
+          "case_01:action:hedge_25:stress_loss",
+          "case_01:action:hedge_25:cvar_95",
+          "case_01:action:hedge_25:liquidity_cost",
+          "case_01:action:hedge_25:governance_penalty",
+          "case_01:action:hedge_25:tenor_penalty",
+          "case_01:action:hedge_25:utility",
+          "case_01:action:reduce_25:stress_loss",
+          "case_01:action:reduce_25:cvar_95",
+          "case_01:action:reduce_25:liquidity_cost",
+          "case_01:action:reduce_25:governance_penalty",
+          "case_01:action:reduce_25:tenor_penalty",
+          "case_01:action:reduce_25:utility",
+          "case_01:action:hedge_50:stress_loss",
+          "case_01:action:hedge_50:cvar_95",
+          "case_01:action:hedge_50:liquidity_cost",
+          "case_01:action:hedge_50:governance_penalty",
+          "case_01:action:hedge_50:tenor_penalty",
+          "case_01:action:hedge_50:utility"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_01:action:hold:stress_loss",
+            "value": 2492.0
+          },
+          {
+            "evidence_id": "case_01:action:hedge_25:utility",
+            "value": -4672.01869225
+          }
+        ]
+      }
+    },
+    {
+      "job": "case_02--challenged",
+      "trajectory": [
+        {
+          "role": "proposer",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "missing_credit",
+          "reference": "abstain",
+          "reference_basis": "missing_credit",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "revision",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "missing_credit",
+          "reference": "abstain",
+          "reference_basis": "missing_credit",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        }
+      ],
+      "challenge": {
+        "report": {
+          "requires_revision": true,
+          "assessment": "The abstention is consistent with the missing-credit rule, and the hold utility arithmetic is correct. Two statements overstate what the evidence establishes.",
+          "issues": [
+            {
+              "issue": "The proposal says the hold utility is used \u201cas required for abstention,\u201d but the declared rule requires abstention because CP-RETAIL credit is missing; it does not require calculating utility for that abstention.",
+              "evidence_ids": [
+                "case_02:decision_rules",
+                "case_02:credit",
+                "case_02:action:hold:utility"
+              ],
+              "requested_change": "Describe the utility as supplementary or remove the claim that it is required for abstention."
+            },
+            {
+              "issue": "The claim that no stress scenarios or model-validation details are supplied is too categorical: specialist reports have accepted validation statuses, while their substantive findings are withheld here. Those statuses do not establish what details the reports contain.",
+              "evidence_ids": [
+                "case_02:workflow:specialist:credit_governance",
+                "case_02:workflow:specialist:market_physical"
+              ],
+              "requested_change": "Qualify this as a limitation of the evidence visible in this bundle; do not imply the reports were absent or lacked those details."
+            }
+          ]
+        },
+        "usable": true,
+        "requires_revision": true,
+        "parse_status": "ok"
+      },
+      "initial_proposal": {
+        "action_or_abstain": "abstain",
+        "decision_basis": "missing_credit",
+        "reason": "CP-RETAIL credit is missing for positions in authorised book B3, and the declared rule requires abstention when credit is unknown.",
+        "procedural": "Do not execute a market action: the available hedge and roll actions are infeasible for missing credit, and reductions are infeasible due to the physical obligation. Clarify CP-RETAIL credit before reconsideration. The hold utility is used as required for abstention; no action is approved.",
+        "economic": "Hold is below the stated stress and VaR limits, but does not reduce exposure. The other feasible alternatives leave exposure unchanged: escalation is pending, and a limit-exception request is also pending.",
+        "evidential": "The missing-credit rule applies to CP-RETAIL in B3. The bundle also does not establish position-level delegation for B3 positions on the retail_supply desk. Risk metrics and utilities are model evidence; no stress scenarios or model validation details are supplied.",
+        "evidence_ids": [
+          "case_02:decision_rules",
+          "case_02:credit",
+          "case_02:mandate",
+          "case_02:position:B3-phys",
+          "case_02:action:hold:stress_loss",
+          "case_02:action:hold:cvar_95",
+          "case_02:action:hold:liquidity_cost",
+          "case_02:action:hold:governance_penalty",
+          "case_02:action:hold:tenor_penalty",
+          "case_02:action:hold:utility",
+          "case_02:limits",
+          "case_02:action:hold:var_95",
+          "case_02:action:hedge_25:feasible",
+          "case_02:action:roll_near_to_far:feasible",
+          "case_02:action:reduce_25:feasible",
+          "case_02:action:escalate",
+          "case_02:action:request_limit_exception"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_02:action:hold:stress_loss",
+            "value": 1529.6
+          },
+          {
+            "evidence_id": "case_02:action:hold:utility",
+            "value": -1529.2060949
+          }
+        ]
+      },
+      "final_proposal": {
+        "action_or_abstain": "abstain",
+        "decision_basis": "missing_credit",
+        "reason": "CP-RETAIL credit is missing for positions in authorised book B3; the declared rule requires abstention when credit is unknown, not treating it as safe.",
+        "procedural": "Do not execute a market action. Hedging and rolling are marked infeasible due to missing credit; reductions are infeasible due to the physical-obligation constraint. Hold is the available no-exposure-change alternative; escalation and a limit-exception request are also feasible but leave exposure unchanged and remain pending. Clarify CP-RETAIL credit before reconsideration; no action is approved.",
+        "economic": "Hold\u2019s reported stress loss is below its stated limit, but it does not reduce exposure. Its calculated utility is supplementary evidence, not a requirement for abstention.",
+        "evidential": "The bundle identifies B3 positions on the retail_supply desk, while the mandate names power_hedge; position-level delegation is not established here. Specialist reports have accepted validation statuses, but their substantive findings are withheld, so this bundle does not reveal their stress-scenario or model-validation details. Forecast visibility is false.",
+        "evidence_ids": [
+          "case_02:decision_rules",
+          "case_02:credit",
+          "case_02:mandate",
+          "case_02:positions",
+          "case_02:limits",
+          "case_02:action:hold:stress_loss",
+          "case_02:action:hold:cvar_95",
+          "case_02:action:hold:liquidity_cost",
+          "case_02:action:hold:governance_penalty",
+          "case_02:action:hold:tenor_penalty",
+          "case_02:action:hold:utility",
+          "case_02:action:hedge_25:feasible",
+          "case_02:action:roll_near_to_far:feasible",
+          "case_02:action:reduce_25:feasible",
+          "case_02:action:escalate",
+          "case_02:action:request_limit_exception",
+          "case_02:market",
+          "case_02:workflow:specialist:credit_governance",
+          "case_02:workflow:specialist:market_physical"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_02:action:hold:stress_loss",
+            "value": 1529.6
+          },
+          {
+            "evidence_id": "case_02:action:hold:utility",
+            "value": -1529.2060949
+          }
+        ]
+      }
+    },
+    {
+      "job": "case_02--self_review",
+      "trajectory": [
+        {
+          "role": "proposer",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "missing_credit",
+          "reference": "abstain",
+          "reference_basis": "missing_credit",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "missing_credit",
+          "reference": "abstain",
+          "reference_basis": "missing_credit",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "missing_credit",
+          "reference": "abstain",
+          "reference_basis": "missing_credit",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "missing_credit",
+          "reference": "abstain",
+          "reference_basis": "missing_credit",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "missing_credit",
+          "reference": "abstain",
+          "reference_basis": "missing_credit",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        }
+      ],
+      "challenge": {},
+      "initial_proposal": {
+        "action_or_abstain": "abstain",
+        "decision_basis": "missing_credit",
+        "reason": "CP-RETAIL credit is missing for positions in authorised book B3; the declared rule requires abstention because unknown credit is not safe.",
+        "procedural": "Do not execute a market action. Hedge and roll actions are also marked infeasible for missing credit; reductions are infeasible due to the physical obligation. Hold is feasible, but does not override the missing-credit abstention rule.",
+        "economic": "Hold stress loss is 1529.6 EUR, and its derived utility is -1529.2060949 EUR. These values do not resolve the credit constraint.",
+        "evidential": "The card identifies CP-RETAIL credit status as missing, with no limit or utilisation supplied. No approval or exception is evidenced.",
+        "evidence_ids": [
+          "case_02:credit",
+          "case_02:positions",
+          "case_02:mandate",
+          "case_02:action:hold:stress_loss",
+          "case_02:action:hold:utility",
+          "case_02:action:hold:cvar_95",
+          "case_02:action:hold:liquidity_cost",
+          "case_02:action:hold:governance_penalty",
+          "case_02:action:hold:tenor_penalty",
+          "case_02:action:hedge_25:feasible",
+          "case_02:action:roll_near_to_far:feasible",
+          "case_02:action:reduce_25:feasible",
+          "case_02:physical_obligations"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_02:action:hold:stress_loss",
+            "value": 1529.6
+          },
+          {
+            "evidence_id": "case_02:action:hold:utility",
+            "value": -1529.2060949
+          }
+        ]
+      },
+      "final_proposal": {
+        "action_or_abstain": "abstain",
+        "decision_basis": "missing_credit",
+        "reason": "CP-RETAIL credit is missing for an exposure in authorised book B3. The declared rule treats unknown credit as unsafe, so abstain.",
+        "procedural": "Hold is feasible but does not override the missing-credit rule. Hedge and roll actions are infeasible because of missing credit; reductions are infeasible because of the physical obligation. Escalation is not required by the unreducible-breach rule because hold does not breach a limit. No approval or exception is evidenced.",
+        "economic": "Hold stress loss is 1529.6 EUR and its derived utility is -1529.2060949 EUR. These values do not resolve the credit constraint.",
+        "evidential": "Credit evidence records CP-RETAIL as missing, with no limit or utilisation. The positions and mandate identify B3 exposure and B3 as an authorised book.",
+        "evidence_ids": [
+          "case_02:credit",
+          "case_02:positions",
+          "case_02:mandate",
+          "case_02:action:hold:stress_loss",
+          "case_02:action:hold:utility",
+          "case_02:action:hold:cvar_95",
+          "case_02:action:hold:liquidity_cost",
+          "case_02:action:hold:governance_penalty",
+          "case_02:action:hold:tenor_penalty",
+          "case_02:action:hedge_25:feasible",
+          "case_02:action:roll_near_to_far:feasible",
+          "case_02:action:reduce_25:feasible",
+          "case_02:physical_obligations",
+          "case_02:action:hold:breach",
+          "case_02:limits"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_02:action:hold:stress_loss",
+            "value": 1529.6
+          },
+          {
+            "evidence_id": "case_02:action:hold:utility",
+            "value": -1529.2060949
+          }
+        ]
+      }
+    },
+    {
+      "job": "case_03--challenged",
+      "trajectory": [
+        {
+          "role": "proposer",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "near_tie",
+          "reference": "abstain",
+          "reference_basis": "near_tie",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "revision",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "near_tie",
+          "reference": "abstain",
+          "reference_basis": "near_tie",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        }
+      ],
+      "challenge": {
+        "report": {
+          "requires_revision": true,
+          "assessment": "The abstention rationale and action ranking follow the declared near-tie rule, but the reported hold utility is misstated.",
+          "issues": [
+            {
+              "issue": "The numeric claim for hold utility is off by EUR 0.001. Applying the declared formula gives -EUR 52,714.8560131, not -EUR 52,714.8550131.",
+              "evidence_ids": [
+                "case_03:decision_rules",
+                "case_03:action:hold:utility",
+                "case_03:action:hold:stress_loss",
+                "case_03:action:hold:cvar_95",
+                "case_03:action:hold:governance_penalty",
+                "case_03:action:hold:liquidity_cost",
+                "case_03:action:hold:tenor_penalty"
+              ],
+              "requested_change": "Correct the numeric claim or state an appropriate rounding convention."
+            }
+          ]
+        },
+        "usable": true,
+        "requires_revision": true,
+        "parse_status": "ok"
+      },
+      "initial_proposal": {
+        "action_or_abstain": "abstain",
+        "decision_basis": "near_tie",
+        "reason": "Hedge_25 ranks highest among feasible actions, but the next distinct feasible outcome, hedge_50, is within the declared EUR 2,000 near-tie threshold; abstain under the stated rule.",
+        "procedural": "Credit is recorded as known for CP-POWER and the mandate covers B13. Reductions are infeasible due to the physical obligation. Escalation and a limit-exception request leave exposure unchanged and are pending, so neither resolves the breach.",
+        "economic": "Hold breaches the stress limit. Hedge_25 is the highest-utility action; hedge_50 is the next distinct outcome. Their utility gap triggers near-tie abstention. Thin liquidity and higher hedge costs matter, but do not override the declared rule.",
+        "evidential": "No missing-credit or unreducible-breach trigger applies: feasible hedges reduce the reported stress and VaR, and credit is reported known. The abstention is based on the near-tie rule, not an assumption that unknown credit is safe.",
+        "evidence_ids": [
+          "case_03:limits",
+          "case_03:action:hold:stress_loss",
+          "case_03:action:hold:cvar_95",
+          "case_03:action:hold:governance_penalty",
+          "case_03:action:hold:liquidity_cost",
+          "case_03:action:hold:tenor_penalty",
+          "case_03:action:hold:utility",
+          "case_03:action:hedge_25:stress_loss",
+          "case_03:action:hedge_25:cvar_95",
+          "case_03:action:hedge_25:liquidity_cost",
+          "case_03:action:hedge_50:stress_loss",
+          "case_03:action:hedge_50:cvar_95",
+          "case_03:action:hedge_50:liquidity_cost",
+          "case_03:action:hedge_25:feasible",
+          "case_03:action:hedge_50:feasible",
+          "case_03:credit",
+          "case_03:mandate",
+          "case_03:action:reduce_25:feasible",
+          "case_03:action:reduce_50:feasible",
+          "case_03:physical_obligations",
+          "case_03:action:escalate:net_delta",
+          "case_03:action:request_limit_exception:net_delta",
+          "case_03:market"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_03:action:hold:stress_loss",
+            "value": 2267.72
+          },
+          {
+            "evidence_id": "case_03:action:hold:utility",
+            "value": -52714.8550131
+          }
+        ]
+      },
+      "final_proposal": {
+        "action_or_abstain": "abstain",
+        "decision_basis": "near_tie",
+        "reason": "Hedge_25 has the highest utility among feasible actions, but hedge_50 is the next distinct outcome and its utility gap is below EUR 2,000. The declared near-tie rule therefore requires abstention.",
+        "procedural": "Credit is recorded as known for the counterparty on the authorised B13 positions, and the mandate covers B13. Reduction actions are infeasible due to the physical obligation. Escalation and requesting a limit exception leave exposure unchanged and remain pending; neither resolves the breach.",
+        "economic": "Hold breaches the stress limit. Feasible hedges reduce risk, but the higher-utility choice is near-tied with hedge_50 under the declared rule. Thin liquidity and hedge costs are relevant but do not override that rule.",
+        "evidential": "The challenge's proposed hold-utility correction is arithmetically incorrect: applying the declared formula to the supplied hold components gives -EUR 52,714.8550131. The abstention and ranking are retained.",
+        "evidence_ids": [
+          "case_03:decision_rules",
+          "case_03:limits",
+          "case_03:credit",
+          "case_03:mandate",
+          "case_03:action:hold:stress_loss",
+          "case_03:action:hold:cvar_95",
+          "case_03:action:hold:governance_penalty",
+          "case_03:action:hold:liquidity_cost",
+          "case_03:action:hold:tenor_penalty",
+          "case_03:action:hold:utility",
+          "case_03:action:hedge_25:stress_loss",
+          "case_03:action:hedge_25:cvar_95",
+          "case_03:action:hedge_25:liquidity_cost",
+          "case_03:action:hedge_25:governance_penalty",
+          "case_03:action:hedge_25:tenor_penalty",
+          "case_03:action:hedge_25:utility",
+          "case_03:action:hedge_50:stress_loss",
+          "case_03:action:hedge_50:cvar_95",
+          "case_03:action:hedge_50:liquidity_cost",
+          "case_03:action:hedge_50:governance_penalty",
+          "case_03:action:hedge_50:tenor_penalty",
+          "case_03:action:hedge_50:utility",
+          "case_03:action:hedge_25:feasible",
+          "case_03:action:hedge_50:feasible",
+          "case_03:action:reduce_25:feasible",
+          "case_03:action:reduce_50:feasible",
+          "case_03:physical_obligations",
+          "case_03:action:escalate:net_delta",
+          "case_03:action:request_limit_exception:net_delta",
+          "case_03:market"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_03:action:hold:stress_loss",
+            "value": 2267.72
+          },
+          {
+            "evidence_id": "case_03:action:hold:utility",
+            "value": -52714.8550131
+          },
+          {
+            "evidence_id": "case_03:action:hedge_25:utility",
+            "value": -4251.53701
+          },
+          {
+            "evidence_id": "case_03:action:hedge_50:utility",
+            "value": -6235.93700655
+          }
+        ]
+      }
+    },
+    {
+      "job": "case_03--self_review",
+      "trajectory": [
+        {
+          "role": "proposer",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "near_tie",
+          "reference": "abstain",
+          "reference_basis": "near_tie",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "near_tie",
+          "reference": "abstain",
+          "reference_basis": "near_tie",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "near_tie",
+          "reference": "abstain",
+          "reference_basis": "near_tie",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "near_tie",
+          "reference": "abstain",
+          "reference_basis": "near_tie",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "abstain",
+          "basis": "near_tie",
+          "reference": "abstain",
+          "reference_basis": "near_tie",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": null,
+          "unnecessary_abstention": false
+        }
+      ],
+      "challenge": {},
+      "initial_proposal": {
+        "action_or_abstain": "abstain",
+        "decision_basis": "near_tie",
+        "reason": "Hedge_25 ranks highest by utility, but hedge_50 is the next distinct feasible outcome and is within the declared EUR 2,000 near-tie threshold; abstain under the rule.",
+        "procedural": "Do not execute a trade on this synthesis. Reduction actions are infeasible because of the physical obligation; escalation and a limit-exception request leave exposure unchanged and do not outrank the feasible hedges.",
+        "economic": "Hold breaches the stress limit. Hedge_25 reduces risk and has the highest utility, but the hedge_50 utility gap is only EUR 1,984.401, below EUR 2,000. Thin liquidity is reflected in the hedge costs.",
+        "evidential": "Credit is known for CP-POWER, the counterparty on the authorised B13 positions, so the missing-credit abstention rule does not apply. Hedge_25 is the economic leader, but the near-tie rule requires abstention. No approval or execution is implied.",
+        "evidence_ids": [
+          "case_03:action:hold:stress_loss",
+          "case_03:action:hold:cvar_95",
+          "case_03:action:hold:governance_penalty",
+          "case_03:action:hold:liquidity_cost",
+          "case_03:action:hold:tenor_penalty",
+          "case_03:action:hold:utility",
+          "case_03:action:hedge_25:stress_loss",
+          "case_03:action:hedge_25:cvar_95",
+          "case_03:action:hedge_25:governance_penalty",
+          "case_03:action:hedge_25:liquidity_cost",
+          "case_03:action:hedge_25:tenor_penalty",
+          "case_03:action:hedge_25:utility",
+          "case_03:action:hedge_50:stress_loss",
+          "case_03:action:hedge_50:cvar_95",
+          "case_03:action:hedge_50:governance_penalty",
+          "case_03:action:hedge_50:liquidity_cost",
+          "case_03:action:hedge_50:tenor_penalty",
+          "case_03:action:hedge_50:utility",
+          "case_03:action:hedge_25:feasible",
+          "case_03:action:hedge_50:feasible",
+          "case_03:action:reduce_25:feasible",
+          "case_03:action:reduce_50:feasible",
+          "case_03:action:escalate:feasible",
+          "case_03:action:request_limit_exception:feasible",
+          "case_03:credit",
+          "case_03:physical_obligations",
+          "case_03:decision_rules"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_03:action:hold:stress_loss",
+            "value": 2267.72
+          },
+          {
+            "evidence_id": "case_03:action:hold:utility",
+            "value": -52714.8550131
+          }
+        ]
+      },
+      "final_proposal": {
+        "action_or_abstain": "abstain",
+        "decision_basis": "near_tie",
+        "reason": "Hedge_25 has the highest utility among feasible actions; hedge_50 is the next distinct feasible outcome. Their utility difference is EUR 1,984.40, below both the EUR 2,000 threshold and 5% of the absolute best utility, so the near-tie rule requires abstention.",
+        "procedural": "Do not execute a trade on this synthesis. Reduce_25 and reduce_50 are infeasible because of the physical obligation. Escalation and requesting a limit exception leave exposure unchanged and do not reduce the breach. Abstention is not approval.",
+        "economic": "Hold breaches the stress limit. Hedge_25 reduces stress below the limit and has the highest feasible utility; hedge_50 is the next distinct feasible action. The hedge_25 liquidity cost is included in its utility.",
+        "evidential": "Credit is known for CP-POWER, the counterparty on the authorised B13 positions, so the missing-credit rule does not apply. Utilities are calculated from supplied components; no forecast or realised outcome is used.",
+        "evidence_ids": [
+          "case_03:action:hold:stress_loss",
+          "case_03:action:hold:utility",
+          "case_03:action:hold:cvar_95",
+          "case_03:action:hold:governance_penalty",
+          "case_03:action:hold:liquidity_cost",
+          "case_03:action:hold:tenor_penalty",
+          "case_03:action:hedge_25:utility",
+          "case_03:action:hedge_25:stress_loss",
+          "case_03:action:hedge_25:cvar_95",
+          "case_03:action:hedge_25:governance_penalty",
+          "case_03:action:hedge_25:liquidity_cost",
+          "case_03:action:hedge_25:tenor_penalty",
+          "case_03:action:hedge_50:utility",
+          "case_03:action:hedge_50:stress_loss",
+          "case_03:action:hedge_50:cvar_95",
+          "case_03:action:hedge_50:governance_penalty",
+          "case_03:action:hedge_50:liquidity_cost",
+          "case_03:action:hedge_50:tenor_penalty",
+          "case_03:action:hedge_25:feasible",
+          "case_03:action:hedge_50:feasible",
+          "case_03:action:reduce_25:feasible",
+          "case_03:action:reduce_50:feasible",
+          "case_03:action:roll_near_to_far:feasible",
+          "case_03:action:escalate:feasible",
+          "case_03:action:request_limit_exception:feasible",
+          "case_03:credit",
+          "case_03:physical_obligations",
+          "case_03:decision_rules"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_03:action:hold:stress_loss",
+            "value": 2267.72
+          },
+          {
+            "evidence_id": "case_03:action:hold:utility",
+            "value": -52714.8560131
+          },
+          {
+            "evidence_id": "case_03:action:hedge_25:utility",
+            "value": -4251.53701
+          },
+          {
+            "evidence_id": "case_03:action:hedge_50:utility",
+            "value": -6235.93700655
+          }
+        ]
+      }
+    },
+    {
+      "job": "case_04--self_review",
+      "trajectory": [
+        {
+          "role": "proposer",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": false,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": false,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": false,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "self_review",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        }
+      ],
+      "challenge": {},
+      "initial_proposal": {
+        "action_or_abstain": "hedge_25",
+        "decision_basis": "highest_utility",
+        "reason": "No missing credit or near-tie abstention applies. hedge_25 has the highest utility among feasible actions.",
+        "procedural": "Choose hedge_25. The hold stress breach can be reduced by feasible market actions, so escalation for an unreducible breach is not required. Reductions are infeasible because of the physical obligation; hedge_50 is the next distinct feasible alternative.",
+        "economic": "hedge_25 utility is -4999.06 EUR, higher than hedge_50 at -7332.366667 EUR. The hold stress loss is 2666.44 EUR. Thin liquidity contributes a 2999.745 EUR cost to hedge_25.",
+        "evidential": "Credit is known for CP-POWER, the counterparty on the authorised-book positions. Utilities are calculated from the declared formula and component evidence; they are not treated as unknown.",
+        "evidence_ids": [
+          "case_04:credit",
+          "case_04:mandate",
+          "case_04:action:hold:stress_loss",
+          "case_04:action:hold:utility",
+          "case_04:action:hold:cvar_95",
+          "case_04:action:hold:governance_penalty",
+          "case_04:action:hold:liquidity_cost",
+          "case_04:action:hold:tenor_penalty",
+          "case_04:action:hedge_25:utility",
+          "case_04:action:hedge_25:stress_loss",
+          "case_04:action:hedge_25:cvar_95",
+          "case_04:action:hedge_25:liquidity_cost",
+          "case_04:action:hedge_25:governance_penalty",
+          "case_04:action:hedge_25:tenor_penalty",
+          "case_04:action:hedge_50:utility",
+          "case_04:action:hedge_50:stress_loss",
+          "case_04:action:hedge_50:cvar_95",
+          "case_04:action:hedge_50:liquidity_cost",
+          "case_04:action:hedge_50:governance_penalty",
+          "case_04:action:hedge_50:tenor_penalty",
+          "case_04:action:reduce_25:feasible",
+          "case_04:action:reduce_50:feasible",
+          "case_04:physical_obligations",
+          "case_04:decision_rules"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_04:action:hold:stress_loss",
+            "value": 2666.44
+          },
+          {
+            "evidence_id": "case_04:action:hedge_25:utility",
+            "value": -4999.06
+          },
+          {
+            "evidence_id": "case_04:action:hold:utility",
+            "value": -53192.1933343
+          },
+          {
+            "evidence_id": "case_04:action:hedge_50:utility",
+            "value": -7332.36666715
+          }
+        ]
+      },
+      "final_proposal": {
+        "action_or_abstain": "hedge_25",
+        "decision_basis": "highest_utility",
+        "reason": "No missing-credit or near-tie rule requires abstention. hedge_25 has the highest utility among feasible actions.",
+        "procedural": "The mandate covers B13 and CP-POWER credit is known. Hold breaches the stress limit, but feasible hedges reduce both hold stress and VaR, so the unreducible-breach escalation rule does not apply. hedge_50 is the next distinct feasible alternative; reduce_25 and reduce_50 are infeasible because of the physical obligation.",
+        "economic": "hedge_25 utility is -4999.06000055 EUR. Hold stress loss is 2666.44 EUR. hedge_50 utility is -7332.36666715 EUR, a gap of 2333.30666660 EUR from hedge_25; this is not a near tie under either threshold.",
+        "evidential": "Utilities are calculated using the declared formula and cited component evidence. Credit is known for CP-POWER, the counterparty on the authorised B13 positions. Market liquidity is described as thin.",
+        "evidence_ids": [
+          "case_04:credit",
+          "case_04:mandate",
+          "case_04:decision_rules",
+          "case_04:physical_obligations",
+          "case_04:market",
+          "case_04:limits",
+          "case_04:action:hold:stress_loss",
+          "case_04:action:hold:feasible",
+          "case_04:action:hedge_25:utility",
+          "case_04:action:hedge_25:stress_loss",
+          "case_04:action:hedge_25:cvar_95",
+          "case_04:action:hedge_25:liquidity_cost",
+          "case_04:action:hedge_25:governance_penalty",
+          "case_04:action:hedge_25:tenor_penalty",
+          "case_04:action:hedge_25:feasible",
+          "case_04:action:hedge_50:utility",
+          "case_04:action:hedge_50:stress_loss",
+          "case_04:action:hedge_50:cvar_95",
+          "case_04:action:hedge_50:liquidity_cost",
+          "case_04:action:hedge_50:governance_penalty",
+          "case_04:action:hedge_50:tenor_penalty",
+          "case_04:action:hedge_50:feasible",
+          "case_04:action:hedge_75:utility",
+          "case_04:action:hedge_75:stress_loss",
+          "case_04:action:hedge_75:cvar_95",
+          "case_04:action:hedge_75:liquidity_cost",
+          "case_04:action:hedge_75:governance_penalty",
+          "case_04:action:hedge_75:tenor_penalty",
+          "case_04:action:hedge_75:feasible",
+          "case_04:action:roll_near_to_far:feasible",
+          "case_04:action:reduce_25:feasible",
+          "case_04:action:reduce_50:feasible",
+          "case_04:action:escalate:feasible",
+          "case_04:action:request_limit_exception:feasible"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_04:action:hold:stress_loss",
+            "value": 2666.44
+          },
+          {
+            "evidence_id": "case_04:action:hedge_25:utility",
+            "value": -4999.06000055
+          },
+          {
+            "evidence_id": "case_04:action:hedge_50:utility",
+            "value": -7332.36666715
+          },
+          {
+            "evidence_id": "case_04:action:hedge_75:utility",
+            "value": -9665.6733334
+          }
+        ]
+      }
+    },
+    {
+      "job": "case_04--challenged",
+      "trajectory": [
+        {
+          "role": "proposer",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        },
+        {
+          "role": "revision",
+          "contract": true,
+          "shape": true,
+          "legal": true,
+          "citations": true,
+          "numeric_correct": true,
+          "required_claims": true,
+          "components_complete": true,
+          "component_errors": [],
+          "action": "hedge_25",
+          "basis": "highest_utility",
+          "reference": "hedge_25",
+          "reference_basis": "highest_utility",
+          "action_match": true,
+          "basis_match": true,
+          "grounded_policy_match": true,
+          "regret": 0.0,
+          "unnecessary_abstention": false
+        }
+      ],
+      "challenge": {
+        "report": {
+          "requires_revision": true,
+          "assessment": "The hedge_25 utility calculation and stated near-tie comparison with hedge_50 are consistent with the evidence, but the claim that hedge_25 has the highest utility among feasible actions is not fully evidenced.",
+          "issues": [
+            {
+              "issue": "The proposal asserts highest utility across feasible actions but cites utility components only for hold, hedge_25 and hedge_50. It omits the feasible hedge_75, roll_near_to_far, escalate and request_limit_exception alternatives, so the ranking is not fully demonstrated under the declared utility rule.",
+              "evidence_ids": [
+                "case_04:decision_rules",
+                "case_04:action:hedge_75:utility",
+                "case_04:action:roll_near_to_far:utility",
+                "case_04:action:escalate:utility",
+                "case_04:action:request_limit_exception:utility"
+              ],
+              "requested_change": "Cite each omitted feasible action\u2019s utility ID and all component IDs, and show its calculated utility when supporting the highest-utility claim."
+            }
+          ]
+        },
+        "usable": true,
+        "requires_revision": true,
+        "parse_status": "ok"
+      },
+      "initial_proposal": {
+        "action_or_abstain": "hedge_25",
+        "decision_basis": "highest_utility",
+        "reason": "Among feasible actions, hedge_25 has the highest utility. Its difference from the next distinct feasible alternative, hedge_50, does not meet the declared near-tie abstention conditions.",
+        "procedural": "A-POWER is authorised to trade B13, and CP-POWER credit is known. The physical obligation makes reduce_25 and reduce_50 infeasible. Escalation leaves exposure unchanged and approval pending; it is not required by the unreducible-breach rule because feasible hedges reduce hold stress below the limit.",
+        "economic": "Hedge_25 reduces stress below the limit with lower liquidity cost than larger hedges. Hold breaches the stress limit. Hedge_50 is the next distinct feasible alternative, but its utility difference from hedge_25 exceeds both near-tie thresholds.",
+        "evidential": "No missing credit is shown for the position counterparty. The market evidence notes thin liquidity and no visible forecast; neither establishes that stress risk is absent. Utility values below are calculated using the declared formula and lambda.",
+        "evidence_ids": [
+          "case_04:decision_rules",
+          "case_04:mandate",
+          "case_04:credit",
+          "case_04:limits",
+          "case_04:physical_obligations",
+          "case_04:action:reduce_25:feasible",
+          "case_04:action:reduce_50:feasible",
+          "case_04:action:escalate",
+          "case_04:action:hold:stress_loss",
+          "case_04:action:hold:cvar_95",
+          "case_04:action:hold:liquidity_cost",
+          "case_04:action:hold:governance_penalty",
+          "case_04:action:hold:tenor_penalty",
+          "case_04:action:hold:utility",
+          "case_04:action:hedge_25:stress_loss",
+          "case_04:action:hedge_25:cvar_95",
+          "case_04:action:hedge_25:liquidity_cost",
+          "case_04:action:hedge_25:governance_penalty",
+          "case_04:action:hedge_25:tenor_penalty",
+          "case_04:action:hedge_25:utility",
+          "case_04:action:hedge_50:stress_loss",
+          "case_04:action:hedge_50:cvar_95",
+          "case_04:action:hedge_50:liquidity_cost",
+          "case_04:action:hedge_50:governance_penalty",
+          "case_04:action:hedge_50:tenor_penalty",
+          "case_04:action:hedge_50:utility",
+          "case_04:market"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_04:action:hold:stress_loss",
+            "value": 2666.44
+          },
+          {
+            "evidence_id": "case_04:action:hedge_25:utility",
+            "value": -4999.06000055
+          },
+          {
+            "evidence_id": "case_04:action:hold:utility",
+            "value": -53192.1933
+          }
+        ]
+      },
+      "final_proposal": {
+        "action_or_abstain": "hedge_25",
+        "decision_basis": "highest_utility",
+        "reason": "Hedge_25 has the highest utility among feasible actions. The next distinct feasible action, hedge_50, is more than EUR 2,000 and more than 5% of the absolute best utility below it, so the near-tie abstention rule does not apply.",
+        "procedural": "A-POWER is authorised to trade B13 and CP-POWER credit is known. Reduce_25 and reduce_50 are infeasible because of the physical obligation. Feasible hedges reduce the hold stress breach; therefore the unreducible-breach escalation rule does not apply. Escalation and a limit-exception request leave exposure unchanged and are not approvals.",
+        "economic": "Hedge_25's utility is higher than hedge_50's and hedge_75's despite their greater measured risk reduction, because their liquidity costs are higher. Hold, roll_near_to_far, escalation and a limit-exception request have lower utility; the roll and no-exposure-change actions do not cure the hold stress breach.",
+        "evidential": "The challenge correctly notes that the original ranking omitted feasible alternatives. Recalculation using the declared formula confirms hedge_25 remains best. The supplied market evidence reports thin liquidity and no visible forecast; neither shows that stress risk is absent.",
+        "evidence_ids": [
+          "case_04:decision_rules",
+          "case_04:mandate",
+          "case_04:credit",
+          "case_04:limits",
+          "case_04:physical_obligations",
+          "case_04:market",
+          "case_04:action:reduce_25:feasible",
+          "case_04:action:reduce_50:feasible",
+          "case_04:action:hold:stress_loss",
+          "case_04:action:hold:cvar_95",
+          "case_04:action:hold:liquidity_cost",
+          "case_04:action:hold:governance_penalty",
+          "case_04:action:hold:tenor_penalty",
+          "case_04:action:hold:utility",
+          "case_04:action:hedge_25:stress_loss",
+          "case_04:action:hedge_25:cvar_95",
+          "case_04:action:hedge_25:liquidity_cost",
+          "case_04:action:hedge_25:governance_penalty",
+          "case_04:action:hedge_25:tenor_penalty",
+          "case_04:action:hedge_25:utility",
+          "case_04:action:hedge_50:stress_loss",
+          "case_04:action:hedge_50:cvar_95",
+          "case_04:action:hedge_50:liquidity_cost",
+          "case_04:action:hedge_50:governance_penalty",
+          "case_04:action:hedge_50:tenor_penalty",
+          "case_04:action:hedge_50:utility",
+          "case_04:action:hedge_75:stress_loss",
+          "case_04:action:hedge_75:cvar_95",
+          "case_04:action:hedge_75:liquidity_cost",
+          "case_04:action:hedge_75:governance_penalty",
+          "case_04:action:hedge_75:tenor_penalty",
+          "case_04:action:hedge_75:utility",
+          "case_04:action:roll_near_to_far:stress_loss",
+          "case_04:action:roll_near_to_far:cvar_95",
+          "case_04:action:roll_near_to_far:liquidity_cost",
+          "case_04:action:roll_near_to_far:governance_penalty",
+          "case_04:action:roll_near_to_far:tenor_penalty",
+          "case_04:action:roll_near_to_far:utility",
+          "case_04:action:escalate:stress_loss",
+          "case_04:action:escalate:cvar_95",
+          "case_04:action:escalate:liquidity_cost",
+          "case_04:action:escalate:governance_penalty",
+          "case_04:action:escalate:tenor_penalty",
+          "case_04:action:escalate:utility",
+          "case_04:action:request_limit_exception:stress_loss",
+          "case_04:action:request_limit_exception:cvar_95",
+          "case_04:action:request_limit_exception:liquidity_cost",
+          "case_04:action:request_limit_exception:governance_penalty",
+          "case_04:action:request_limit_exception:tenor_penalty",
+          "case_04:action:request_limit_exception:utility"
+        ],
+        "numeric_claims": [
+          {
+            "evidence_id": "case_04:action:hold:stress_loss",
+            "value": 2666.44
+          },
+          {
+            "evidence_id": "case_04:action:hedge_25:utility",
+            "value": -4999.06000055
+          },
+          {
+            "evidence_id": "case_04:action:hold:utility",
+            "value": -53192.1933343
+          },
+          {
+            "evidence_id": "case_04:action:hedge_50:utility",
+            "value": -7332.36666715
+          },
+          {
+            "evidence_id": "case_04:action:hedge_75:utility",
+            "value": -9665.6733334
+          },
+          {
+            "evidence_id": "case_04:action:roll_near_to_far:utility",
+            "value": -54692.0658343
+          },
+          {
+            "evidence_id": "case_04:action:escalate:utility",
+            "value": -53192.1933343
+          },
+          {
+            "evidence_id": "case_04:action:request_limit_exception:utility",
+            "value": -53192.1933343
+          }
+        ]
+      }
+    }
+  ],
+  "retained_artifact_sha256": {
+    "manifest.json": "128b3cc629d94a821e1ed21705230aacb2173c6bd5ff4769c6f3c69bc2523126",
+    "results.json": "7815f456e0dfda9b930a4c4e57c2fef3ef166443fe0747129f6a8f5aaa7382b1",
+    "requests.jsonl": "5b1bc73e433312ca06ab116520677e0224524a020cf8ea80cdf422dac71112af",
+    "responses.jsonl": "6b078761aa0fe8319e97161f048ef6939f1b969d28664ab252c1094de13bb688",
+    "evaluation-packages.json": "52129a8ccc48435ca2fc828db4132e2b2980518ee08b6bccdb212804d24e6221",
+    "analysis/independent_recount.py": "25a75550f7ad6e61abf45a831de693dc03e1ebbff2dacf5b1e958e268eea6cef"
+  }
+}

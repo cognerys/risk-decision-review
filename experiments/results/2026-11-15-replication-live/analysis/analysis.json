@@ -1,0 +1,539 @@
+{
+  "run_id": "20261115T125106Z-20ababf4",
+  "mode": "live",
+  "recount_matches": true,
+  "analysis_source_sha256": "00a57611d0099e6f0f69c598dbd2e4a53a6ae9f4e9334bd1f7ae5d1392c8de80",
+  "source_artifact_sha256": {
+    "manifest.json": "073d0f00d96b4ba43b60e376d206ee13cb9fb2382d0f4a4888d31334b2a0cf17",
+    "results.json": "4992e223ae25e9c941ea5482bd2a613baf705e6f0a8f8ce4c64f89ce86dddea2",
+    "requests.jsonl": "549f36a881eb2f25b4ddc6d4406dba0bee508f7452a7d5ff8d75722da821713b",
+    "responses.jsonl": "bb2bc9590165d753673cf1ebefc27f721a0bfc417d74999a2048bfe47c9f9654",
+    "rows.jsonl": "3e50a19ded577283ac6812df73dbf32c4f9c303d4d4fc2e40662724f195d193f",
+    "evidence-bundles.json": "821b7598d1771e06a827068d0d5068da97ce68e0c66107bf0e722e6bb5a0bdf2",
+    "evaluation-packages.json": "52129a8ccc48435ca2fc828db4132e2b2980518ee08b6bccdb212804d24e6221",
+    "reference-targets.json": "99886fb260d09084f9c201cb098e1351281d62ab8d18495e151c5c512c6200d0"
+  },
+  "summary": {
+    "arms": {
+      "single": {
+        "planned": 4,
+        "attempted": 4,
+        "completed": 4,
+        "primary_contract_pass": 4,
+        "grounded_reference_match": 4,
+        "grounded_policy_match": 4,
+        "basis_match": 4,
+        "reference_match": 4,
+        "final_reference_match": 4,
+        "abstentions": 2,
+        "fallbacks": 0,
+        "calls": 4,
+        "latency_seconds": 29.07844587499858
+      },
+      "specialists": {
+        "planned": 4,
+        "attempted": 4,
+        "completed": 4,
+        "primary_contract_pass": 4,
+        "grounded_reference_match": 4,
+        "grounded_policy_match": 4,
+        "basis_match": 4,
+        "reference_match": 4,
+        "final_reference_match": 4,
+        "abstentions": 2,
+        "fallbacks": 0,
+        "calls": 12,
+        "latency_seconds": 83.22624145800364
+      },
+      "challenged": {
+        "planned": 4,
+        "attempted": 4,
+        "completed": 4,
+        "primary_contract_pass": 2,
+        "grounded_reference_match": 2,
+        "grounded_policy_match": 2,
+        "basis_match": 3,
+        "reference_match": 3,
+        "final_reference_match": 4,
+        "abstentions": 2,
+        "fallbacks": 2,
+        "calls": 20,
+        "latency_seconds": 140.3365009559784
+      },
+      "self_review": {
+        "planned": 4,
+        "attempted": 4,
+        "completed": 4,
+        "primary_contract_pass": 4,
+        "grounded_reference_match": 4,
+        "grounded_policy_match": 4,
+        "basis_match": 4,
+        "reference_match": 4,
+        "final_reference_match": 4,
+        "abstentions": 2,
+        "fallbacks": 0,
+        "calls": 20,
+        "latency_seconds": 168.79149679199327
+      }
+    },
+    "paired": [
+      {
+        "card_id": "case_01",
+        "left": "single",
+        "right": "specialists",
+        "evaluable": true,
+        "contract_delta": 0,
+        "grounded_policy_delta": 0,
+        "grounded_reference_delta": 0
+      },
+      {
+        "card_id": "case_02",
+        "left": "single",
+        "right": "specialists",
+        "evaluable": true,
+        "contract_delta": 0,
+        "grounded_policy_delta": 0,
+        "grounded_reference_delta": 0
+      },
+      {
+        "card_id": "case_03",
+        "left": "single",
+        "right": "specialists",
+        "evaluable": true,
+        "contract_delta": 0,
+        "grounded_policy_delta": 0,
+        "grounded_reference_delta": 0
+      },
+      {
+        "card_id": "case_04",
+        "left": "single",
+        "right": "specialists",
+        "evaluable": true,
+        "contract_delta": 0,
+        "grounded_policy_delta": 0,
+        "grounded_reference_delta": 0
+      },
+      {
+        "card_id": "case_01",
+        "left": "specialists",
+        "right": "challenged",
+        "evaluable": true,
+        "contract_delta": -1,
+        "grounded_policy_delta": -1,
+        "grounded_reference_delta": -1
+      },
+      {
+        "card_id": "case_02",
+        "left": "specialists",
+        "right": "challenged",
+        "evaluable": true,
+        "contract_delta": 0,
+        "grounded_policy_delta": 0,
+        "grounded_reference_delta": 0
+      },
+      {
+        "card_id": "case_03",
+        "left": "specialists",
+        "right": "challenged",
+        "evaluable": true,
+        "contract_delta": 0,
+        "grounded_policy_delta": 0,
+        "grounded_reference_delta": 0
+      },
+      {
+        "card_id": "case_04",
+        "left": "specialists",
+        "right": "challenged",
+        "evaluable": true,
+        "contract_delta": -1,
+        "grounded_policy_delta": -1,
+        "grounded_reference_delta": -1
+      },
+      {
+        "card_id": "case_01",
+        "left": "self_review",
+        "right": "challenged",
+        "evaluable": true,
+        "contract_delta": -1,
+        "grounded_policy_delta": -1,
+        "grounded_reference_delta": -1
+      },
+      {
+        "card_id": "case_02",
+        "left": "self_review",
+        "right": "challenged",
+        "evaluable": true,
+        "contract_delta": 0,
+        "grounded_policy_delta": 0,
+        "grounded_reference_delta": 0
+      },
+      {
+        "card_id": "case_03",
+        "left": "self_review",
+        "right": "challenged",
+        "evaluable": true,
+        "contract_delta": 0,
+        "grounded_policy_delta": 0,
+        "grounded_reference_delta": 0
+      },
+      {
+        "card_id": "case_04",
+        "left": "self_review",
+        "right": "challenged",
+        "evaluable": true,
+        "contract_delta": -1,
+        "grounded_policy_delta": -1,
+        "grounded_reference_delta": -1
+      }
+    ],
+    "interpretation": "Single exploratory pass on four composed cases in two correlated contrast pairs. No significance, generalisation or causal role-benefit claim."
+  },
+  "usage": {
+    "single": {
+      "input_units": 39757,
+      "output_units": 3378,
+      "total_units": 43135,
+      "reasoning_units": 803,
+      "cached_input_units": 29509,
+      "completed_calls": 4,
+      "failed_calls": 0,
+      "finish_reasons": {
+        "stop": 4
+      }
+    },
+    "specialists": {
+      "input_units": 123801,
+      "output_units": 9774,
+      "total_units": 133575,
+      "reasoning_units": 1392,
+      "cached_input_units": 18819,
+      "completed_calls": 12,
+      "failed_calls": 0,
+      "finish_reasons": {
+        "stop": 12
+      }
+    },
+    "challenged": {
+      "input_units": 218334,
+      "output_units": 16371,
+      "total_units": 234705,
+      "reasoning_units": 4449,
+      "cached_input_units": 58875,
+      "completed_calls": 20,
+      "failed_calls": 0,
+      "finish_reasons": {
+        "stop": 19,
+        "length": 1
+      }
+    },
+    "self_review": {
+      "input_units": 209851,
+      "output_units": 19185,
+      "total_units": 229036,
+      "reasoning_units": 4928,
+      "cached_input_units": 10236,
+      "completed_calls": 20,
+      "failed_calls": 0,
+      "finish_reasons": {
+        "stop": 20
+      }
+    }
+  },
+  "paired_counts": {
+    "specialists-minus-single": {
+      "contract_delta": {
+        "wins": 0,
+        "losses": 0,
+        "ties": 4,
+        "incomplete": 0
+      },
+      "grounded_reference_delta": {
+        "wins": 0,
+        "losses": 0,
+        "ties": 4,
+        "incomplete": 0
+      },
+      "grounded_policy_delta": {
+        "wins": 0,
+        "losses": 0,
+        "ties": 4,
+        "incomplete": 0
+      }
+    },
+    "challenged-minus-specialists": {
+      "contract_delta": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 2,
+        "incomplete": 0
+      },
+      "grounded_reference_delta": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 2,
+        "incomplete": 0
+      },
+      "grounded_policy_delta": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 2,
+        "incomplete": 0
+      }
+    },
+    "challenged-minus-self_review": {
+      "contract_delta": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 2,
+        "incomplete": 0
+      },
+      "grounded_reference_delta": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 2,
+        "incomplete": 0
+      },
+      "grounded_policy_delta": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 2,
+        "incomplete": 0
+      }
+    }
+  },
+  "revisions": [
+    {
+      "card_id": "case_01",
+      "initial_action": "hedge_25",
+      "revised_action": null,
+      "contract_delta": -1,
+      "grounded_policy_delta": -1,
+      "grounded_reference_delta": -1,
+      "challenge_usable": true,
+      "challenge": {
+        "requires_revision": true,
+        "assessment": "The proposed hedge_25 choice is consistent with the declared utility ranking and the missing-credit rule: CP-RETAIL positions are outside the authorised B13 book. However, the proposal makes unsupported claims about specialist findings and does not cite enough evidence to substantiate its highest-utility and near-tie conclusions across feasible actions.",
+        "issues": [
+          {
+            "issue": "The proposal says specialist findings are consistent with the mandate and risk evidence, but workflow records establish only mechanical validation and explicitly withhold substantive findings.",
+            "evidence_ids": [
+              "case_01:workflow:specialist:credit_governance",
+              "case_01:workflow:specialist:market_physical"
+            ],
+            "requested_change": "Remove the claim of substantive consistency or limit it to the reports' accepted mechanical validation status."
+          },
+          {
+            "issue": "The highest-utility and near-tie conclusions require comparison with all feasible actions, but the proposal omits utility citations and component evidence for several alternatives, including hedge_75, roll_near_to_far, escalate, and request_limit_exception. The declared rule requires the utility ID and its components for derived utility claims.",
+            "evidence_ids": [
+              "case_01:decision_rules",
+              "case_01:action:hedge_75:utility",
+              "case_01:action:roll_near_to_far:utility",
+              "case_01:action:escalate:utility",
+              "case_01:action:request_limit_exception:utility"
+            ],
+            "requested_change": "Cite the declared utility IDs and component IDs needed to compare every feasible action, or qualify the ranking and near-tie claims to match the evidence cited."
+          }
+        ]
+      },
+      "initial_errors": [],
+      "revised_errors": []
+    },
+    {
+      "card_id": "case_02",
+      "initial_action": "abstain",
+      "revised_action": "abstain",
+      "contract_delta": 0,
+      "grounded_policy_delta": 0,
+      "grounded_reference_delta": 0,
+      "challenge_usable": true,
+      "challenge": {
+        "requires_revision": false,
+        "assessment": "The abstention is supported: CP-RETAIL credit is missing for positions in authorised book B3, and the declared rule treats unknown credit as unsafe. The hold utility is correctly derived from its cited components. The stated alternatives and non-breach rationale are consistent with the supplied evidence.",
+        "issues": []
+      },
+      "initial_errors": [],
+      "revised_errors": []
+    },
+    {
+      "card_id": "case_03",
+      "initial_action": "abstain",
+      "revised_action": "abstain",
+      "contract_delta": 0,
+      "grounded_policy_delta": 0,
+      "grounded_reference_delta": 0,
+      "challenge_usable": true,
+      "challenge": {
+        "requires_revision": true,
+        "assessment": "The abstention rationale and action ranking follow the declared rules, but the reported hedge_50 utility is miscalculated by EUR 0.001.",
+        "issues": [
+          {
+            "issue": "The proposal reports hedge_50 utility as -6235.93700655; applying the declared formula to its cited components gives -6235.93800655.",
+            "evidence_ids": [
+              "case_03:decision_rules",
+              "case_03:action:hedge_50:utility",
+              "case_03:action:hedge_50:stress_loss",
+              "case_03:action:hedge_50:cvar_95",
+              "case_03:action:hedge_50:liquidity_cost",
+              "case_03:action:hedge_50:governance_penalty",
+              "case_03:action:hedge_50:tenor_penalty"
+            ],
+            "requested_change": "Correct the hedge_50 utility numeric claim and ensure the near-tie comparison uses the corrected value."
+          }
+        ]
+      },
+      "initial_errors": [],
+      "revised_errors": []
+    },
+    {
+      "card_id": "case_04",
+      "initial_action": "hedge_25",
+      "revised_action": "hedge_25",
+      "contract_delta": 0,
+      "grounded_policy_delta": 0,
+      "grounded_reference_delta": 0,
+      "challenge_usable": true,
+      "challenge": {
+        "requires_revision": false,
+        "assessment": "The recommendation is consistent with the supplied evidence and decision rules. hedge_25 is feasible, brings stress below the limit, and has the highest calculated utility among feasible actions; the next distinct outcome is outside the near-tie thresholds. CP-POWER credit is known, and the proposal does not claim execution or approval.",
+        "issues": []
+      },
+      "initial_errors": [],
+      "revised_errors": []
+    }
+  ],
+  "handoff": {
+    "planned_reports": 16,
+    "recorded_reports": 16,
+    "usable_reports": 15,
+    "fully_valid_reports": 15,
+    "statuses": {
+      "accepted": 15,
+      "rejected": 1
+    },
+    "by_arm": {
+      "specialists": {
+        "planned": 8,
+        "recorded": 8,
+        "usable": 7,
+        "fully_valid": 7
+      },
+      "challenged": {
+        "planned": 8,
+        "recorded": 8,
+        "usable": 8,
+        "fully_valid": 8
+      }
+    },
+    "by_role": {
+      "market_physical": {
+        "planned": 8,
+        "recorded": 8,
+        "usable": 8,
+        "fully_valid": 8
+      },
+      "credit_governance": {
+        "planned": 8,
+        "recorded": 8,
+        "usable": 7,
+        "fully_valid": 7
+      }
+    },
+    "recorded_findings": 53,
+    "accepted_findings": 53,
+    "unreliable_finding_count_reports": 1,
+    "rejection_codes": {},
+    "reports_per_job": {
+      "2": 7,
+      "1": 1
+    },
+    "stage_parse_status": {
+      "challenger": {
+        "ok": 4
+      },
+      "credit_governance": {
+        "ok": 7,
+        "invalid_json": 1
+      },
+      "market_physical": {
+        "ok": 8
+      },
+      "proposer": {
+        "ok": 16
+      },
+      "revision": {
+        "no_text": 1,
+        "ok": 3
+      },
+      "self_review": {
+        "ok": 16
+      }
+    },
+    "challenges_requesting_revision": 2
+  },
+  "conditional_synthetic_regret": [
+    {
+      "job_id": "case_01--single",
+      "regret_eur": 0.0
+    },
+    {
+      "job_id": "case_01--specialists",
+      "regret_eur": 0.0
+    },
+    {
+      "job_id": "case_01--challenged",
+      "regret_eur": null
+    },
+    {
+      "job_id": "case_01--self_review",
+      "regret_eur": 0.0
+    },
+    {
+      "job_id": "case_02--specialists",
+      "regret_eur": null
+    },
+    {
+      "job_id": "case_02--challenged",
+      "regret_eur": null
+    },
+    {
+      "job_id": "case_02--self_review",
+      "regret_eur": null
+    },
+    {
+      "job_id": "case_02--single",
+      "regret_eur": null
+    },
+    {
+      "job_id": "case_03--challenged",
+      "regret_eur": null
+    },
+    {
+      "job_id": "case_03--self_review",
+      "regret_eur": null
+    },
+    {
+      "job_id": "case_03--single",
+      "regret_eur": null
+    },
+    {
+      "job_id": "case_03--specialists",
+      "regret_eur": null
+    },
+    {
+      "job_id": "case_04--self_review",
+      "regret_eur": 0.0
+    },
+    {
+      "job_id": "case_04--single",
+      "regret_eur": 0.0
+    },
+    {
+      "job_id": "case_04--specialists",
+      "regret_eur": 0.0
+    },
+    {
+      "job_id": "case_04--challenged",
+      "regret_eur": 0.0
+    }
+  ]
+}

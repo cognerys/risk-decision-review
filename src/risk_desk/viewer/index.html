@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decision review graph</title>
+<style>
+  :root {
+    --ink: #1c1915;
+    --muted: #5c564c;
+    --line: #d9d2c5;
+    --paper: #f6f1e8;
+    --card: #fffdf8;
+    --ran: #1f6b4a;
+    --ran-bg: #f3faf6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 15px/1.45 "Iowan Old Style", Palatino, Georgia, serif;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 22px 28px 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  h1 { font-size: 22px; font-weight: 600; margin: 0; }
+  header p { margin: 4px 0 0; color: var(--muted); max-width: 640px; }
+  main { display: grid; grid-template-columns: 260px 1fr; min-height: calc(100vh - 86px); }
+  aside, section { padding: 18px 20px 32px; }
+  aside { border-right: 1px solid var(--line); }
+  #stage { display: grid; grid-template-columns: minmax(420px, 1fr) minmax(340px, 440px); }
+  #result { border-left: 1px solid var(--line); }
+  h2 { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; margin: 18px 0 8px; }
+  button, select {
+    font: inherit;
+    color: inherit;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  .arms { display: flex; flex-wrap: wrap; gap: 6px; }
+  .arms button { padding: 6px 10px; cursor: pointer; }
+  .arms button[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+  label { display: block; margin: 12px 0 6px; color: var(--muted); }
+  select, .run { width: 100%; padding: 8px 10px; }
+  .run { margin-top: 14px; cursor: pointer; background: var(--ink); color: var(--paper); }
+  .run:disabled { opacity: 0.5; cursor: wait; }
+  #canvas { padding: 28px 36px 48px; }
+  .node {
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .rail { display: flex; flex-direction: column; align-items: center; min-height: 100%; }
+  .dot {
+    width: 12px; height: 12px; border-radius: 50%;
+    border: 2px solid var(--ink); background: var(--card); margin-top: 6px;
+  }
+  .stem { width: 2px; flex: 1; background: var(--ink); min-height: 28px; }
+  .node:last-child .stem { display: none; }
+  .body {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 12px 12px;
+    margin-bottom: 8px;
+    max-width: 520px;
+  }
+  .node.ran .dot { background: var(--ran); border-color: var(--ran); }
+  .node.ran .body { border-color: #b7d7c6; background: var(--ran-bg); }
+  .name { font-weight: 600; }
+  .tag { float: right; font-size: 12px; color: var(--muted); }
+  .blurb { margin: 4px 0 0; color: var(--muted); }
+  .out { margin: 8px 0 0; padding: 0; list-style: none; }
+  .out li { margin: 0 0 4px; }
+  #status { min-height: 1.2em; color: var(--muted); }
+  #action { font-size: 28px; margin: 0; }
+  #reason { margin: 4px 0 12px; color: var(--muted); }
+  .finding { margin: 0 0 12px; }
+  .finding h3 { margin: 0 0 4px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  .finding p { margin: 0; }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  td { padding: 4px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td:first-child { color: var(--muted); padding-right: 12px; width: 42%; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Decision review graph</h1>
+    <p>Each box is a step in the chosen review configuration. After a run, the box shows what that step wrote: the evidence, each report, the proposal and the checked result.</p>
+  </div>
+</header>
+<main>
+  <aside>
+    <h2>Configuration</h2>
+    <div class="arms" id="arms"></div>
+    <label for="card">Decision card</label>
+    <select id="card"></select>
+    <label><input id="live" type="checkbox"> Call gpt-6-luna</label>
+    <button class="run" id="run" type="button">Run this configuration</button>
+    <p id="status"></p>
+  </aside>
+  <div id="stage">
+    <section id="canvas" aria-live="polite"></section>
+    <aside id="result">
+      <h2>Result</h2>
+      <p id="empty">Run a configuration to see the action and the evidence behind it.</p>
+      <div id="verdict" hidden>
+        <p id="action"></p>
+        <p id="reason"></p>
+        <div id="findings"></div>
+        <h2>Evidence</h2>
+        <table id="evidence"></table>
+      </div>
+    </aside>
+  </div>
+</main>
+<script>
+const armsEl = document.querySelector("#arms");
+const canvas = document.querySelector("#canvas");
+const cardEl = document.querySelector("#card");
+const statusEl = document.querySelector("#status");
+const empty = document.querySelector("#empty");
+const verdict = document.querySelector("#verdict");
+let arm = "challenged";
+let outputs = {};
+
+function draw(payload) {
+  canvas.replaceChildren();
+  for (const node of payload.nodes) {
+    const lines = outputs[node.id] || [];
+    const row = document.createElement("div");
+    row.className = "node" + (lines.length ? " ran" : "");
+    const rail = document.createElement("div");
+    rail.className = "rail";
+    rail.innerHTML = '<div class="dot"></div><div class="stem"></div>';
+    const body = document.createElement("div");
+    body.className = "body";
+    const name = document.createElement("div");
+    name.className = "name";
+    name.textContent = node.label;
+    if (node.conditionalIn) {
+      const tag = document.createElement("span");
+      tag.className = "tag";
+      tag.textContent = "fan-out";
+      name.append(" ", tag);
+    }
+    const blurb = document.createElement("p");
+    blurb.className = "blurb";
+    blurb.textContent = node.blurb;
+    body.append(name, blurb);
+    if (lines.length) {
+      const list = document.createElement("ul");
+      list.className = "out";
+      for (const line of lines) {
+        const item = document.createElement("li");
+        item.textContent = line;
+        list.appendChild(item);
+      }
+      body.appendChild(list);
+    }
+    row.append(rail, body);
+    canvas.appendChild(row);
+  }
+}
+
+async function loadGraph() {
+  const payload = await (await fetch("/api/graph?arm=" + arm)).json();
+  const incoming = new Map(payload.edges.filter(e => e.conditional).map(e => [e.target, true]));
+  payload.nodes.forEach(n => { n.conditionalIn = Boolean(incoming.get(n.id)); });
+  draw(payload);
+}
+
+function formatEvidence(row) {
+  let shown = row.value;
+  if (typeof shown === "number") {
+    shown = Math.abs(shown) >= 10 ? shown.toLocaleString("en-GB", {maximumFractionDigits: 0}) : String(shown);
+  } else if (typeof shown === "boolean") {
+    shown = shown ? "yes" : "no";
+  } else if (Array.isArray(shown)) {
+    shown = shown.join(", ");
+  } else if (shown && typeof shown === "object") {
+    shown = Object.entries(shown).map(([key, item]) => `${key} ${item}`).join(", ");
+  }
+  return row.units === "EUR" ? `${shown} EUR` : String(shown);
+}
+
+function showResult(data) {
+  const rec = data.recommendation || {};
+  empty.hidden = true;
+  verdict.hidden = false;
+  document.querySelector("#action").textContent = rec.action_or_abstain || "no action";
+  document.querySelector("#reason").textContent = rec.reason || "";
+  const findings = document.querySelector("#findings");
+  findings.replaceChildren();
+  for (const [title, text] of [["Procedural", rec.procedural], ["Economic", rec.economic], ["Evidential", rec.evidential]]) {
+    if (!text) continue;
+    const block = document.createElement("div");
+    block.className = "finding";
+    const heading = document.createElement("h3");
+    heading.textContent = title;
+    const paragraph = document.createElement("p");
+    paragraph.textContent = text;
+    block.append(heading, paragraph);
+    findings.appendChild(block);
+  }
+  const table = document.querySelector("#evidence");
+  table.replaceChildren();
+  for (const row of data.evidence || []) {
+    const tr = document.createElement("tr");
+    const key = document.createElement("td");
+    const value = document.createElement("td");
+    key.textContent = String(row.kind).replaceAll("_", " ");
+    value.textContent = formatEvidence(row);
+    tr.append(key, value);
+    table.appendChild(tr);
+  }
+}
+
+async function init() {
+  const meta = await (await fetch("/api/meta")).json();
+  for (const name of meta.arms) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = name;
+    button.setAttribute("aria-pressed", name === arm ? "true" : "false");
+    button.addEventListener("click", () => {
+      arm = name;
+      outputs = {};
+      empty.hidden = false;
+      verdict.hidden = true;
+      for (const el of armsEl.children) el.setAttribute("aria-pressed", el === button ? "true" : "false");
+      loadGraph();
+    });
+    armsEl.appendChild(button);
+  }
+  for (const id of meta.cards) {
+    const option = document.createElement("option");
+    option.value = id;
+    option.textContent = id;
+    cardEl.appendChild(option);
+  }
+  cardEl.value = "ordinary_inside";
+  await loadGraph();
+}
+
+document.querySelector("#run").addEventListener("click", async () => {
+  const button = document.querySelector("#run");
+  button.disabled = true;
+  statusEl.textContent = "Running…";
+  try {
+    const response = await fetch("/api/run", {
+      method: "POST",
+      headers: {"content-type": "application/json"},
+      body: JSON.stringify({arm, card_id: cardEl.value, live: document.querySelector("#live").checked}),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || "run failed");
+    outputs = data.outputs || {};
+    await loadGraph();
+    showResult(data);
+    statusEl.textContent = data.live ? "Live model call finished." : "Finished with the scripted model. Tick the box for gpt-6-luna.";
+  } catch (err) {
+    statusEl.textContent = err.message;
+  } finally {
+    button.disabled = false;
+  }
+});
+
+init();
+</script>
+</body>
+</html>

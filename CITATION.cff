@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+title: "Risk decision review: a synthetic desk for evaluating post-trade energy risk decisions"
+type: software
+authors:
+  - family-names: Morris
+    given-names: Gary
+    affiliation: "University of Bath; Cognerys"
+version: 0.2.0
+date-released: 2026-11-15
+license: MIT
+repository-code: "https://github.com/cognerys/risk-decision-review"

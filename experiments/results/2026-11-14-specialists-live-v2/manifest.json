@@ -1,0 +1,186 @@
+{
+  "run_id": "20261114T104952Z-50766afe",
+  "mode": "live",
+  "experiment": "EXP-008",
+  "prompt_version": "specialist-study-v2",
+  "settings": {
+    "model": "gpt-6-luna",
+    "live": true,
+    "reasoning_effort": "low",
+    "langsmith_project": "ri[redacted]"
+  },
+  "jobs": [
+    {
+      "card_id": "case_01",
+      "arm": "single",
+      "job_id": "case_01--single"
+    },
+    {
+      "card_id": "case_01",
+      "arm": "specialists",
+      "job_id": "case_01--specialists"
+    },
+    {
+      "card_id": "case_01",
+      "arm": "challenged",
+      "job_id": "case_01--challenged"
+    },
+    {
+      "card_id": "case_01",
+      "arm": "self_review",
+      "job_id": "case_01--self_review"
+    },
+    {
+      "card_id": "case_02",
+      "arm": "specialists",
+      "job_id": "case_02--specialists"
+    },
+    {
+      "card_id": "case_02",
+      "arm": "challenged",
+      "job_id": "case_02--challenged"
+    },
+    {
+      "card_id": "case_02",
+      "arm": "self_review",
+      "job_id": "case_02--self_review"
+    },
+    {
+      "card_id": "case_02",
+      "arm": "single",
+      "job_id": "case_02--single"
+    },
+    {
+      "card_id": "case_03",
+      "arm": "challenged",
+      "job_id": "case_03--challenged"
+    },
+    {
+      "card_id": "case_03",
+      "arm": "self_review",
+      "job_id": "case_03--self_review"
+    },
+    {
+      "card_id": "case_03",
+      "arm": "single",
+      "job_id": "case_03--single"
+    },
+    {
+      "card_id": "case_03",
+      "arm": "specialists",
+      "job_id": "case_03--specialists"
+    },
+    {
+      "card_id": "case_04",
+      "arm": "self_review",
+      "job_id": "case_04--self_review"
+    },
+    {
+      "card_id": "case_04",
+      "arm": "single",
+      "job_id": "case_04--single"
+    },
+    {
+      "card_id": "case_04",
+      "arm": "specialists",
+      "job_id": "case_04--specialists"
+    },
+    {
+      "card_id": "case_04",
+      "arm": "challenged",
+      "job_id": "case_04--challenged"
+    }
+  ],
+  "call_cap": 60,
+  "max_generated_units": 1800,
+  "generated_unit": "tokens",
+  "timeout_seconds": 60,
+  "sdk_retries": 0,
+  "source": {
+    "python": "3.11.15 (main, May 10 2026, 19:23:07) [Clang 22.1.3 ]",
+    "platform": "darwin",
+    "source_sha256": {
+      "experiments/run_specialist_followup.py": "068e64570e3dbe739f7f87338dcb1100857a50d1cdc801c687a1a412338fbed9",
+      "experiments/specialist-study-v2/protocol.md": "d8224d6b6f3ce5818e831606711b7127578dc50bfdbaf522cf047e7598ddbd1b",
+      "pyproject.toml": "c4174a325cdd5e8037a6af06df36be7719b152bcb7ca38d263435d11da5db866",
+      "src/risk_desk/__init__.py": "85e3952302e3b8745ebdbc52b810680ef9ef9a17b41933b612674552c271d40e",
+      "src/risk_desk/cli.py": "56baf3e9afc253f4154814778171f71805e746fe80a255263cc39768d46bf3dd",
+      "src/risk_desk/config.py": "7851b603f0fd87ce25068bde1ad4469ba014b618c2efea3d5a3b45da809c44ef",
+      "src/risk_desk/data/__init__.py": "5c2ced5022c731e50a07d9bbcd8c79016d8a5226839f8c5c264f72e4537b586b",
+      "src/risk_desk/data/cards.py": "9f1ac02fcf3c30263926c8e45c5eff0182fb8ff6852a7f0a58598dc1685f0fcf",
+      "src/risk_desk/data/fixtures/returns.json": "3c46a78e73ee6daafe9d0c033566018ed9fc1d9954b66e6997ff8df098fcc9f9",
+      "src/risk_desk/data/followup_cases.py": "27874148231321348ad3f7b44612816808fa4361be515be9468d7878c281c8b5",
+      "src/risk_desk/data/panel.py": "99c418660fb3ef342368c2b99158d78b4020fa18d82f7a7f1e0d52ed618de730",
+      "src/risk_desk/engine/__init__.py": "5c2ced5022c731e50a07d9bbcd8c79016d8a5226839f8c5c264f72e4537b586b",
+      "src/risk_desk/engine/score.py": "3d365758802d089297372893a9644ea573f4bffa68feb0da288e6de7aee45a1c",
+      "src/risk_desk/graphs/__init__.py": "689ab641725bc3671b097e073c075581bfb76100f9d24000d0eef70b84a64c1c",
+      "src/risk_desk/graphs/desk.py": "d61c0f946584dbcbd80e0e76fb959029b3699ddd4b0c825858a7194140192c0e",
+      "src/risk_desk/graphs/research_desk.py": "8bfea714d759ef81a390b9d5f91085e8a3e95dcd81353e1b7eb9d4e8969ea080",
+      "src/risk_desk/graphs/specialists.py": "415c6abed8cc057327348fe5706fea97fac24386403aca38bb5cd9cb8bb7e627",
+      "src/risk_desk/graphs/specialists_v2.py": "803446022326accd81ebf0a6dc3a7d51970074075c723127f98836eba3cc3a29",
+      "src/risk_desk/graphs/stub.py": "34f1f33bafc98121fdaf977a408965869baf7ae67b6e891400a553baddfe5ea8",
+      "src/risk_desk/graphs/workflows.py": "21c69249adb9ee2dbdb5d4737cce9299e22c3beb98055b0e628abdc3a159f0ee",
+      "src/risk_desk/llm.py": "84c41def770b9d989e7e847d830f6aa9cc8e62870204903b0368da3332ff3f62",
+      "src/risk_desk/policy.py": "894d0cfd77d8d19f36a6436294bd78c1266f90e67c1312b19edc852b027d03b1",
+      "src/risk_desk/responses.py": "e55778f97b13b774b56156d5f39d0a1bc456d95c3a97fadbe7d95dd862eb4902",
+      "src/risk_desk/schemas.py": "a34fc8f9f811ffe6255ddbd0c9690b6df96fe96bbdebf6e533431b1fbe21cce0",
+      "src/risk_desk/state.py": "052822a729fc624a6230c890fb511864981b2894e8a58c584c727fbcc0fa8042",
+      "src/risk_desk/tools/__init__.py": "5c2ced5022c731e50a07d9bbcd8c79016d8a5226839f8c5c264f72e4537b586b",
+      "src/risk_desk/tools/desk_tools.py": "3cdbdb75b18f805c5688381424e1d68bd99cfb4fa7bfc92cf10f0cc867e4c5b7",
+      "src/risk_desk/tracing.py": "e1221f81eaeb51809cdadb1d07eaf50e5f089784a053f3446d59b5aea216b5d5",
+      "src/risk_desk/viewer/__init__.py": "5accb13bd69a74c1fc4abb2d7e6975e44bd509734218f4ac3574b59fb311c3b7",
+      "src/risk_desk/viewer/graph_view.py": "9462d3a2a95fce2f494704154f9a787e4dba41bc2cea93190fc3faeb5ecb4522",
+      "src/risk_desk/viewer/server.py": "20d72180cd1484e7ddf358ae7f25133fa9bc778b015fe788517d0db000062c24",
+      "tests/test_engine.py": "90e0230b6b5d5d52a3bf9c6848bd82516dccf30e3ecabc09374815c2aa9650fc",
+      "tests/test_followup_study.py": "098ab0c53069c5839a3c3946819fce23b5e35da48178a0c5d5fff3775725768b",
+      "tests/test_foundation.py": "a6e1ca476943f72d95396f971631777b220680fa01bdcbd0efa13b1749e72c8d",
+      "tests/test_graphs.py": "6dfd7f99da0ebd8c8404154edf2bbd1cfecf7491f5c4e1a86158cd23704a3f11",
+      "tests/test_research_graph_entrypoints.py": "f2b528a83bed825253404163bb7e9bd7ddc0a9b9aeadf401602635a711462acb",
+      "tests/test_response_evaluation.py": "fef604f19f7ef5fa2ea0116ad3f061e2cabba9b0923ecc1d8ed014da8aa5a2ed",
+      "tests/test_specialist_graphs.py": "19251321b20671af061b7fa211b37b7191b4d045e39fbd424856e3663b1f6502",
+      "tests/test_specialist_graphs_v2.py": "7e756810b9a82f92baa413f90dd947cf55791c4e0046c546894dc1746bbbd3df",
+      "tests/test_specialist_study_runner.py": "d9a67cf97d394902dcf2b13f1d4e477bf4f80efa72a40899d8f2c923ef0c1b3c",
+      "tests/test_viewer.py": "a21f90283878c3e310661a5e72bb36dcf121add477bfaff8d0306be09fc2ae3a"
+    },
+    "head": "f051fef58a4f3b50fe2a4e083ac5a30609528e53",
+    "worktree_status": [
+      " M README.md",
+      " M langgraph.json",
+      " M src/risk_desk/cli.py",
+      " M src/risk_desk/graphs/desk.py",
+      " M src/risk_desk/graphs/workflows.py",
+      " M src/risk_desk/tracing.py",
+      "?? docs/2026-11-14-graph-review.md",
+      "?? docs/2026-11-14-repair-checks.json",
+      "?? docs/2026-11-14-specialist-checks.json",
+      "?? docs/2026-11-14-specialist-study-review.md",
+      "?? docs/research-graph-usage.md",
+      "?? experiments/analyse_specialist_study.py",
+      "?? experiments/results/2026-11-14-instrumentation-offline-v2/",
+      "?? experiments/results/2026-11-14-instrumentation-offline-v3/",
+      "?? experiments/results/2026-11-14-instrumentation-offline/",
+      "?? experiments/results/2026-11-14-specialists-live-v1/",
+      "?? experiments/results/2026-11-14-specialists-live-v2/",
+      "?? experiments/results/2026-11-14-specialists-offline-v1/",
+      "?? experiments/results/2026-11-14-specialists-offline-v2/",
+      "?? experiments/run_instrumented_study.py",
+      "?? experiments/run_specialist_followup.py",
+      "?? experiments/run_specialist_study.py",
+      "?? experiments/specialist-study-v1/",
+      "?? experiments/specialist-study-v2/",
+      "?? src/risk_desk/data/followup_cases.py",
+      "?? src/risk_desk/graphs/research_desk.py",
+      "?? src/risk_desk/graphs/specialists.py",
+      "?? src/risk_desk/graphs/specialists_v2.py",
+      "?? src/risk_desk/responses.py",
+      "?? src/risk_desk/viewer/",
+      "?? tests/test_followup_study.py",
+      "?? tests/test_research_graph_entrypoints.py",
+      "?? tests/test_response_evaluation.py",
+      "?? tests/test_specialist_graphs.py",
+      "?? tests/test_specialist_graphs_v2.py",
+      "?? tests/test_specialist_study_runner.py",
+      "?? tests/test_viewer.py"
+    ]
+  }
+}
