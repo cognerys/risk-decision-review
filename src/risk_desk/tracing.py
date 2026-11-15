@@ -27,7 +27,9 @@ def redact(value: Any) -> Any:
             secret = os.environ.get(name, "")
             if secret:
                 value = value.replace(secret, "[redacted]")
-        return re.sub(r"sk-[A-Za-z0-9_-]+", "[redacted]", value)
+        # A key starts a token. Without the lookbehind this also matched inside ordinary words
+        # such as "risk-reducing", which altered model prose in both retained runs (see docs/study.md).
+        return re.sub(r"(?<![A-Za-z0-9])sk-[A-Za-z0-9_-]+", "[redacted]", value)
     if isinstance(value, dict):
         cleaned: dict[str, Any] = {}
         for key, item in value.items():

@@ -11,7 +11,7 @@ The four cases are two contrast pairs, written before their reference answers we
 - **Authority.** Two cases with the same positions, one counterparty with missing credit, and a mandate that either does or does not cover the book holding that counterparty. The reference is to hedge in the first and to abstain for missing credit in the second.
 - **Threshold.** Two cases built the same way with position sizes scaled by 0.91 or 1.07, which puts the two best actions either inside or outside the declared near-tie band. The reference is to abstain as a near-tie in the first and to hedge in the second.
 
-Every configuration receives the same evidence. The final utility of each action is withheld: models are given the formula, the desk's weight and the components, and must calculate it. The reference answers and the computed utilities never enter a model request. This has been checked against the retained requests of both runs: all 112 carry the frozen visible bundle and no reference field or true utility value. The retained text has had secret-shaped strings redacted, so it is not byte-exact, and what the provider did with a request cannot be observed.
+Every configuration receives the same evidence. The final utility of each action is withheld: models are given the formula, the desk's weight and the components, and must calculate it. The reference answers and the computed utilities never enter a model request. This has been checked against the retained requests of both runs: all 112 carry the frozen visible bundle and no reference field or true utility value. What the provider did with a request cannot be observed.
 
 **Primary endpoint.** A job passes when the model's final proposal clears the proposal check and also has the reference action and the reference reason. The proposal check requires a well-formed reply, a feasible action or an abstention and only registered evidence identifiers. It requires two numbers to be stated, the stress loss of holding and the utility of the chosen action, and compares every stated number with the true value held by code, which the model was not shown, to within EUR 0.01 or one part in a million, whichever is larger. It also requires citations to all five components of each utility calculated. It is a test of structure and arithmetic, not of the choice.
 
@@ -56,6 +56,16 @@ In run 1 a challenger found a real arithmetic discrepancy of one thousandth of a
 In run 1 the self-review configuration introduced a utility error of about half a euro on its second pass and corrected it on a later one. Only the intermediate records show that. Run 2's self-review passes all passed.
 
 Run 1 also has a [qualitative review](../experiments/results/2026-11-14-specialists-live-v2/analysis/qualitative-review.md) of the traces. Run 2 has had only a bounded reading of its challenger episodes and self-review numbers, not a review of the prose.
+
+## A fault in the harness that affected both runs
+
+The harness passes each model reply through a filter that masks anything shaped like an API key before the reply is stored or handed to the next role. The filter's pattern matched any text beginning `sk-`, including the middle of ordinary words, so "risk-reducing" became "ri[redacted]". The masked text is what downstream roles read.
+
+Five requests in each run carried at least one masked word: in run 1, in the `challenged` jobs for cases 1 and 2 and the `specialists` job for case 3; in run 2, in the `challenged` jobs for cases 1 and 2 and the `specialists` job for case 2. The retained requests are exactly what was sent, and the retained replies are the masked versions (five in run 1, four in run 2), so the original words are not recoverable.
+
+Run 2's `challenged` job for case 1, whose revision returned no text, is one of the affected jobs. The records show no connection between the masking and that failure or any other, and none can be excluded. No evidence identifier or number was altered, so the proposal check was not affected.
+
+The pattern was corrected after both runs, on 15 November 2026, with a test. The retained runs are unchanged, and each run's source snapshot holds the original filter.
 
 ## What this supports
 

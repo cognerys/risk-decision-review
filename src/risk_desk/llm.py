@@ -20,7 +20,7 @@ STUB_CONTENT = (
 # Empty until then so show-config can report the configured effort.
 REASONING_NOTE = ""
 
-_SK_VALUE = re.compile(r"sk-[A-Za-z0-9_\-]+")
+_SK_VALUE = re.compile(r"(?<![A-Za-z0-9])sk-[A-Za-z0-9_\-]+")
 
 
 def _stub_message() -> AIMessage:

@@ -271,3 +271,10 @@ def test_langsmith_env_hides_values(monkeypatch: pytest.MonkeyPatch) -> None:
 
 def test_mirror_path_is_runs_file() -> None:
     assert Path("runs/mirror.jsonl") == MIRROR_PATH
+
+
+def test_redaction_leaves_ordinary_words_alone() -> None:
+    from risk_desk.tracing import redact
+
+    assert redact("a risk-reducing hedge; task-level view") == "a risk-reducing hedge; task-level view"
+    assert redact("key sk-abc123_DEF and (sk-xyz789)") == "key [redacted] and ([redacted])"

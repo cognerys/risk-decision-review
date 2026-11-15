@@ -96,6 +96,7 @@ A live run makes at most 56 model calls. Read the [protocol](experiments/protoco
 - Four authored cases in two contrast pairs. They are not a benchmark, a sample of a market or evidence about real desks.
 - The checks cover structure, feasibility, cited identifiers and stated numbers. They do not establish that every sentence a model wrote is true or useful.
 - No person reviewed the explanations. Whether they help a reviewer is untested.
+- Both retained runs were affected by a fault in the harness: a filter meant to mask API keys also masked part of ordinary words such as "risk-reducing" in some model replies before the next role read them. It is described in [docs/study.md](docs/study.md) and has since been corrected.
 - This repository holds the current study only. Earlier generations of the graph and their pilot runs are kept in the private research record.
 
 ## Licence and citation
