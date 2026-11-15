@@ -12,7 +12,7 @@ A fictional merchant, Northfold Energy, has eight books of power, gas and carbon
 
 1. **Code works out the consequences.** For each of nine possible actions (hold, three sizes of hedge, two sizes of reduction, a roll, an escalation, a limit-exception request) a deterministic engine calculates the risk, the cost and whether the action is allowed. A declared utility ranks them. This ranking is the reference; it is a stated assumption, not a validated view of good trading.
 2. **Models propose and explain.** A language model reads the same evidence and proposes an action, citing the evidence it relied on.
-3. **Code checks the proposal's form.** The cited identifiers must exist, the action must be feasible and the stated numbers must match. A proposal that fails this check is replaced by the reference action, and the record says that happened. The check never looks at whether the action agrees with the reference; that comparison is made separately when a study is scored.
+3. **Code checks the proposal.** The cited identifiers must exist, the action must be feasible and each stated number must match the value code holds. A proposal that fails this check is replaced by the reference action, and the record says that happened. The check never looks at whether the action agrees with the reference; that comparison is made separately when a study is scored.
 
 The same card can be run through four **review configurations**:
 
@@ -27,7 +27,7 @@ The same card can be run through four **review configurations**:
 
 ## What the study found
 
-Two live runs of the same frozen [protocol](experiments/protocol.md): four authored cases, each run once through all four configurations. A job passes when the model's final proposal clears the form check (valid citations, correct numbers) and also has the reference action and reason.
+Two live runs of the same frozen [protocol](experiments/protocol.md): four authored cases, each run once through all four configurations. A job passes when the model's final proposal clears that check (valid citations, correct numbers) and also has the reference action and reason.
 
 | Configuration | Model calls per run | Passed, run 1 (14 Nov 2026) | Passed, run 2 (15 Nov 2026) |
 | --- | ---: | ---: | ---: |
@@ -40,7 +40,7 @@ Two live runs of the same frozen [protocol](experiments/protocol.md): four autho
 - **The difference between two runs was as large as the difference between configurations.** In run 1 the single proposer was the only configuration whose final proposal failed a check. In run 2 it passed everything and the most elaborate configuration failed twice. Either run alone gives a different ordering.
 - **No failure was a wrong action.** Two were a citation to a field the evidence dictionary does not register. One was a revision that used its whole output allowance on reasoning and returned no text; it came after a challenge that raised two issues, one of them a request to cover every alternative or qualify the ranking, and it replaced a proposal that had already passed. One specialist report was rejected because a full stop followed otherwise valid JSON.
 - **A challenge did not reliably help.** In run 1 a request of the same kind was followed by a fuller, correct answer. In run 2 it was followed by an empty one, and the challenger did not raise the bad citation in the other failing case.
-- **The final answer hides all of this.** Code replaced each proposal that failed the form check with the reference action (one in run 1, two in run 2), so all 16 jobs in each run ended on the reference action. Only the intermediate records show which answers came from a model.
+- **The final answer hides all of this.** Code replaced each proposal that failed the check with the reference action (one in run 1, two in run 2), so all 16 jobs in each run ended on the reference action. Only the intermediate records show which answers came from a model.
 
 Two runs of four cases cannot rank the configurations. What they do show is that a single run of a small study is not enough to claim an extra role helps, and that a review needs its intermediate records kept. [docs/study.md](docs/study.md) has the detail, and both runs are in `experiments/results/` with every request and response.
 
