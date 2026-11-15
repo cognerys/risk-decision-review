@@ -54,7 +54,7 @@ Liquidity cost = hedged or reduced notional times the regime spread (thin liquid
 Utility, stated as an assumption:
 
 ```
-U = -0.5 * remaining_stress_loss - lambda * cvar_95 - liquidity_cost - governance_penalty
+U = -0.5 * remaining_stress_loss - lambda * cvar_95 - liquidity_cost - governance_penalty - tenor_penalty
 ```
 
 Lambdas: power_hedge 0.35, gas_procurement 0.45, retail_supply 0.55, proprietary 0.15.
